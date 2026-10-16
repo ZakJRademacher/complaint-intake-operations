@@ -16,7 +16,7 @@ with (ROOT/'results/review_queue.csv').open(encoding='utf-8-sig',newline='') as 
 (sample/'README.md').write_text('''# Selected review examples
 
 These are the first 100 cases from the full flagged queue sorted by longest nonnegative routing interval, then source ID. They are selected historical examples, not a random or representative sample, and do not include all flag types. No review annotations have been invented. Regenerate the full queue from the original Kaggle CSV using the pipeline.
-''',encoding='utf-8')
+''',encoding='utf-8',newline='\n')
 files=[]
 for folder in ['src','sql','tests','tools','docs','deliverables','data/sample','.github']:
     files += [p for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts and not p.name.endswith('.inspect.ndjson') and p.name!='package-manifest.json']
