@@ -1,0 +1,9 @@
+data/raw/*
+!data/raw/.gitkeep
+results/*.sqlite*
+results/review_queue.csv
+results/quality_issues.csv
+__pycache__/
+*.pyc
+tmp/
+node_modules/
