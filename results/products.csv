@@ -1,0 +1,19 @@
+﻿product,cases,timely_yes,timely_no,timely_unknown,valid_intervals,over_review_days,negative_intervals
+Mortgage,242194,237206,4988,0,240661,18455,1533
+Debt collection,171567,159525,12042,0,169811,20218,1756
+Credit reporting,140424,140124,300,0,138692,19039,1732
+Credit card,89190,88208,982,0,88028,5174,1162
+Bank account or service,86207,83979,2228,0,85807,4731,400
+"Credit reporting, credit repair services, or other personal consumer reports",59186,58264,922,0,59186,1170,0
+Student loan,38612,38118,494,0,38387,2649,225
+Consumer Loan,31608,30359,1249,0,31470,3317,138
+Credit card or prepaid card,11921,11845,76,0,11921,529,0
+Checking or savings account,9947,9833,114,0,9947,400,0
+Payday loan,5546,4944,602,0,5520,864,26
+Money transfers,5354,5208,146,0,5274,291,80
+Prepaid card,3819,3769,50,0,3819,992,0
+Vehicle loan or lease,2873,2774,99,0,2873,145,0
+"Payday loan, title loan, or personal loan",2245,2084,161,0,2245,237,0
+"Money transfer, virtual currency, or money service",2213,2175,38,0,2213,119,0
+Other financial service,1059,945,114,0,1059,229,0
+Virtual currency,18,16,2,0,18,3,0

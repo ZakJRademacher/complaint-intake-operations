@@ -1,0 +1,7 @@
+﻿channel,cases,timely_yes,timely_no,timely_unknown,valid_intervals,negative_intervals,invalid_dates,over_review_days,total_intake_days,p90_days
+Web,634850,616257,18593,0,627854,6996,0,38131,1861182,5
+Referral,142931,140040,2891,0,142880,51,0,19556,855982,11
+Phone,58505,56691,1814,0,58504,1,0,5389,269026,7
+Postal mail,55066,54064,1002,0,55065,1,0,13467,452492,21
+Fax,12277,11980,297,0,12277,0,0,1944,80248,13
+Email,354,344,10,0,351,3,0,75,2865,19
