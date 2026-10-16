@@ -1,0 +1,9 @@
+{
+  "caseCountMatches": true,
+  "responseRateMatches": true,
+  "inputChangePropagates": true,
+  "resolutionGuardWorks": true,
+  "inputsRestored": true,
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "nativeExcelTested": false
+}

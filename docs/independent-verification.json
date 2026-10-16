@@ -1,0 +1,32 @@
+{
+  "method": "Independent pandas recomputation of full source; read-only SQLite, openpyxl/XML and strict PDF checks",
+  "checks": {
+    "source_fingerprint": true,
+    "source_rows": true,
+    "unique_source_ids": true,
+    "timely_yes": true,
+    "timely_no": true,
+    "negative_intervals": true,
+    "valid_intervals": true,
+    "median_days": true,
+    "p90_days": true,
+    "routing_over_threshold": true,
+    "review_queue_count": true,
+    "channel_counts": true,
+    "sqlite_integrity": true,
+    "source_lineage": true,
+    "omitted_narratives": true,
+    "xlsx_count": true,
+    "xlsx_rate": true,
+    "xlsx_formula": true,
+    "xlsx_review_rows": true,
+    "xlsx_notes_blank": true,
+    "xlsx_resolution_guard": true,
+    "xlsx_status_validation": true,
+    "xlsx_native_chart": true,
+    "pdf_two_pages": true,
+    "pdf_metrics": true
+  },
+  "all_passed": true,
+  "nativeExcelRecalculationTested": false
+}
