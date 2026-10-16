@@ -22,8 +22,8 @@
     },
     {
       "path": "data/sample/README.md",
-      "bytes": 383,
-      "sha256": "6fc52bae38024e7260465c3d38798bf92b4292ac815f76b0e8e20ec258d0d458"
+      "bytes": 380,
+      "sha256": "733f31b09bcc3571f817e3459d39d989166b7bc1d0460979e388818cab6c6079"
     },
     {
       "path": "data/sample/review_examples_100.csv",
@@ -62,8 +62,8 @@
     },
     {
       "path": "deliverables/README.md",
-      "bytes": 528,
-      "sha256": "7229654eadbabd873c21cd8cd3a050b8c37565a9dd0f24d8d86245c03abab6d7"
+      "bytes": 519,
+      "sha256": "b902f91c9b22120da7bd0f3675a98b291f07e79a9b2e3b1748ccd629722a4fb1"
     },
     {
       "path": "deliverables/routing-by-channel.png",
@@ -87,8 +87,8 @@
     },
     {
       "path": "docs/METHOD.md",
-      "bytes": 3588,
-      "sha256": "20f8ab196c5cbbf29958e4c54756a0bdbc9487511e4d20305ef6dbce55784258"
+      "bytes": 3566,
+      "sha256": "b77b43d494cabc166dd71bb7dac1f3b64c5fffa85af7779fa790363c99e604bb"
     },
     {
       "path": "docs/PROJECT_WALKTHROUGH.md",
@@ -137,8 +137,8 @@
     },
     {
       "path": "results/analysis.json",
-      "bytes": 73711,
-      "sha256": "7626092c507590ac3a5ac84b9daaf2c712328de0d5d5633b9eb691f6cba49695"
+      "bytes": 71012,
+      "sha256": "c3ccdc89175386c7f08f1cf58b1cf53a960578b13c6f3dc87d75384603bd7d74"
     },
     {
       "path": "results/channels.csv",
@@ -222,8 +222,8 @@
     },
     {
       "path": "tools/package_project.py",
-      "bytes": 2406,
-      "sha256": "c639e5093b5a50a35d96e619b3f17d2a9c19a5c1535f74c23912af6ad56c4f8a"
+      "bytes": 2419,
+      "sha256": "e28344a16a273be7311e81c466fe74d90a92773be34af3305b93af12085208aa"
     },
     {
       "path": "tools/verify_outputs.py",
