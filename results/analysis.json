@@ -1,0 +1,2701 @@
+{
+  "source": {
+    "file": "Consumer_Complaints.csv",
+    "sha256": "038210fab477fd01d526b87872610cb8f2266814aaf716979f51c04b55c81587"
+  },
+  "metrics": {
+    "cases": 903983,
+    "timely_yes": 879376,
+    "timely_no": 24607,
+    "timely_unknown": 0,
+    "negative_intervals": 7052,
+    "invalid_dates": 0,
+    "valid_intervals": 896931,
+    "over_review_days": 78562,
+    "first_received": "2011-12-01",
+    "last_received": "2017-11-15",
+    "input_rows": 903983,
+    "invalid_ids": 0,
+    "conflicting_id_rows": 0,
+    "identical_duplicate_rows": 0,
+    "review_days": 7,
+    "known_timely": 903983,
+    "timely_rate": 0.9727793553639836,
+    "median_intake_days": 0,
+    "p90_intake_days": 7,
+    "review_queue_cases": 105969,
+    "unmatched_notes": 0
+  },
+  "checks": {
+    "source_partition": true,
+    "response_partition": true,
+    "date_partition": true,
+    "channel_reconciliation": true,
+    "monthly_reconciliation": true,
+    "product_reconciliation": true,
+    "database_integrity": true
+  },
+  "reports": {
+    "channels": [
+      {
+        "channel": "Web",
+        "cases": 634850,
+        "timely_yes": 616257,
+        "timely_no": 18593,
+        "timely_unknown": 0,
+        "valid_intervals": 627854,
+        "negative_intervals": 6996,
+        "invalid_dates": 0,
+        "over_review_days": 38131,
+        "total_intake_days": 1861182,
+        "p90_days": 5
+      },
+      {
+        "channel": "Referral",
+        "cases": 142931,
+        "timely_yes": 140040,
+        "timely_no": 2891,
+        "timely_unknown": 0,
+        "valid_intervals": 142880,
+        "negative_intervals": 51,
+        "invalid_dates": 0,
+        "over_review_days": 19556,
+        "total_intake_days": 855982,
+        "p90_days": 11
+      },
+      {
+        "channel": "Phone",
+        "cases": 58505,
+        "timely_yes": 56691,
+        "timely_no": 1814,
+        "timely_unknown": 0,
+        "valid_intervals": 58504,
+        "negative_intervals": 1,
+        "invalid_dates": 0,
+        "over_review_days": 5389,
+        "total_intake_days": 269026,
+        "p90_days": 7
+      },
+      {
+        "channel": "Postal mail",
+        "cases": 55066,
+        "timely_yes": 54064,
+        "timely_no": 1002,
+        "timely_unknown": 0,
+        "valid_intervals": 55065,
+        "negative_intervals": 1,
+        "invalid_dates": 0,
+        "over_review_days": 13467,
+        "total_intake_days": 452492,
+        "p90_days": 21
+      },
+      {
+        "channel": "Fax",
+        "cases": 12277,
+        "timely_yes": 11980,
+        "timely_no": 297,
+        "timely_unknown": 0,
+        "valid_intervals": 12277,
+        "negative_intervals": 0,
+        "invalid_dates": 0,
+        "over_review_days": 1944,
+        "total_intake_days": 80248,
+        "p90_days": 13
+      },
+      {
+        "channel": "Email",
+        "cases": 354,
+        "timely_yes": 344,
+        "timely_no": 10,
+        "timely_unknown": 0,
+        "valid_intervals": 351,
+        "negative_intervals": 3,
+        "invalid_dates": 0,
+        "over_review_days": 75,
+        "total_intake_days": 2865,
+        "p90_days": 19
+      }
+    ],
+    "monthly": [
+      {
+        "month": "2011-12",
+        "cases": 2536,
+        "timely_yes": 2285,
+        "timely_no": 251,
+        "timely_unknown": 0,
+        "valid_intervals": 2520,
+        "over_review_days": 207,
+        "negative_intervals": 16,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-01",
+        "cases": 3230,
+        "timely_yes": 3038,
+        "timely_no": 192,
+        "timely_unknown": 0,
+        "valid_intervals": 3229,
+        "over_review_days": 541,
+        "negative_intervals": 1,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-02",
+        "cases": 3509,
+        "timely_yes": 3373,
+        "timely_no": 136,
+        "timely_unknown": 0,
+        "valid_intervals": 3509,
+        "over_review_days": 548,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-03",
+        "cases": 6230,
+        "timely_yes": 6005,
+        "timely_no": 225,
+        "timely_unknown": 0,
+        "valid_intervals": 6223,
+        "over_review_days": 887,
+        "negative_intervals": 7,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-04",
+        "cases": 5703,
+        "timely_yes": 5466,
+        "timely_no": 237,
+        "timely_unknown": 0,
+        "valid_intervals": 5701,
+        "over_review_days": 550,
+        "negative_intervals": 2,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-05",
+        "cases": 7617,
+        "timely_yes": 7216,
+        "timely_no": 401,
+        "timely_unknown": 0,
+        "valid_intervals": 7616,
+        "over_review_days": 1733,
+        "negative_intervals": 1,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-06",
+        "cases": 7841,
+        "timely_yes": 7485,
+        "timely_no": 356,
+        "timely_unknown": 0,
+        "valid_intervals": 7837,
+        "over_review_days": 1425,
+        "negative_intervals": 4,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-07",
+        "cases": 6755,
+        "timely_yes": 6522,
+        "timely_no": 233,
+        "timely_unknown": 0,
+        "valid_intervals": 6751,
+        "over_review_days": 984,
+        "negative_intervals": 4,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-08",
+        "cases": 6877,
+        "timely_yes": 6667,
+        "timely_no": 210,
+        "timely_unknown": 0,
+        "valid_intervals": 6873,
+        "over_review_days": 689,
+        "negative_intervals": 4,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-09",
+        "cases": 5493,
+        "timely_yes": 5347,
+        "timely_no": 146,
+        "timely_unknown": 0,
+        "valid_intervals": 5493,
+        "over_review_days": 199,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-10",
+        "cases": 6741,
+        "timely_yes": 6591,
+        "timely_no": 150,
+        "timely_unknown": 0,
+        "valid_intervals": 6715,
+        "over_review_days": 221,
+        "negative_intervals": 26,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-11",
+        "cases": 6139,
+        "timely_yes": 6034,
+        "timely_no": 105,
+        "timely_unknown": 0,
+        "valid_intervals": 6091,
+        "over_review_days": 415,
+        "negative_intervals": 48,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2012-12",
+        "cases": 6238,
+        "timely_yes": 6121,
+        "timely_no": 117,
+        "timely_unknown": 0,
+        "valid_intervals": 6132,
+        "over_review_days": 484,
+        "negative_intervals": 106,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-01",
+        "cases": 9741,
+        "timely_yes": 9645,
+        "timely_no": 96,
+        "timely_unknown": 0,
+        "valid_intervals": 9614,
+        "over_review_days": 1230,
+        "negative_intervals": 127,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-02",
+        "cases": 8349,
+        "timely_yes": 8278,
+        "timely_no": 71,
+        "timely_unknown": 0,
+        "valid_intervals": 8206,
+        "over_review_days": 1241,
+        "negative_intervals": 143,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-03",
+        "cases": 8784,
+        "timely_yes": 8724,
+        "timely_no": 60,
+        "timely_unknown": 0,
+        "valid_intervals": 8687,
+        "over_review_days": 623,
+        "negative_intervals": 97,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-04",
+        "cases": 8633,
+        "timely_yes": 8568,
+        "timely_no": 65,
+        "timely_unknown": 0,
+        "valid_intervals": 8544,
+        "over_review_days": 523,
+        "negative_intervals": 89,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-05",
+        "cases": 8170,
+        "timely_yes": 8114,
+        "timely_no": 56,
+        "timely_unknown": 0,
+        "valid_intervals": 8066,
+        "over_review_days": 585,
+        "negative_intervals": 104,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-06",
+        "cases": 8035,
+        "timely_yes": 7985,
+        "timely_no": 50,
+        "timely_unknown": 0,
+        "valid_intervals": 7952,
+        "over_review_days": 566,
+        "negative_intervals": 83,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-07",
+        "cases": 9271,
+        "timely_yes": 9150,
+        "timely_no": 121,
+        "timely_unknown": 0,
+        "valid_intervals": 9081,
+        "over_review_days": 1030,
+        "negative_intervals": 190,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-08",
+        "cases": 9565,
+        "timely_yes": 9452,
+        "timely_no": 113,
+        "timely_unknown": 0,
+        "valid_intervals": 9330,
+        "over_review_days": 1054,
+        "negative_intervals": 235,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-09",
+        "cases": 9636,
+        "timely_yes": 9485,
+        "timely_no": 151,
+        "timely_unknown": 0,
+        "valid_intervals": 9457,
+        "over_review_days": 1029,
+        "negative_intervals": 179,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-10",
+        "cases": 9241,
+        "timely_yes": 9120,
+        "timely_no": 121,
+        "timely_unknown": 0,
+        "valid_intervals": 8908,
+        "over_review_days": 915,
+        "negative_intervals": 333,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-11",
+        "cases": 9319,
+        "timely_yes": 9150,
+        "timely_no": 169,
+        "timely_unknown": 0,
+        "valid_intervals": 8710,
+        "over_review_days": 1627,
+        "negative_intervals": 609,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2013-12",
+        "cases": 9474,
+        "timely_yes": 9277,
+        "timely_no": 197,
+        "timely_unknown": 0,
+        "valid_intervals": 8736,
+        "over_review_days": 2027,
+        "negative_intervals": 738,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-01",
+        "cases": 12619,
+        "timely_yes": 12378,
+        "timely_no": 241,
+        "timely_unknown": 0,
+        "valid_intervals": 11602,
+        "over_review_days": 2869,
+        "negative_intervals": 1017,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-02",
+        "cases": 13048,
+        "timely_yes": 12822,
+        "timely_no": 226,
+        "timely_unknown": 0,
+        "valid_intervals": 11886,
+        "over_review_days": 1586,
+        "negative_intervals": 1162,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-03",
+        "cases": 13943,
+        "timely_yes": 13725,
+        "timely_no": 218,
+        "timely_unknown": 0,
+        "valid_intervals": 13021,
+        "over_review_days": 1411,
+        "negative_intervals": 922,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-04",
+        "cases": 13840,
+        "timely_yes": 13531,
+        "timely_no": 309,
+        "timely_unknown": 0,
+        "valid_intervals": 13035,
+        "over_review_days": 1569,
+        "negative_intervals": 805,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-05",
+        "cases": 12169,
+        "timely_yes": 11917,
+        "timely_no": 252,
+        "timely_unknown": 0,
+        "valid_intervals": 12169,
+        "over_review_days": 1189,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-06",
+        "cases": 12520,
+        "timely_yes": 12253,
+        "timely_no": 267,
+        "timely_unknown": 0,
+        "valid_intervals": 12520,
+        "over_review_days": 1153,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-07",
+        "cases": 13417,
+        "timely_yes": 13126,
+        "timely_no": 291,
+        "timely_unknown": 0,
+        "valid_intervals": 13417,
+        "over_review_days": 1390,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-08",
+        "cases": 13188,
+        "timely_yes": 12839,
+        "timely_no": 349,
+        "timely_unknown": 0,
+        "valid_intervals": 13188,
+        "over_review_days": 1430,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-09",
+        "cases": 12465,
+        "timely_yes": 12144,
+        "timely_no": 321,
+        "timely_unknown": 0,
+        "valid_intervals": 12465,
+        "over_review_days": 1399,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-10",
+        "cases": 12902,
+        "timely_yes": 12501,
+        "timely_no": 401,
+        "timely_unknown": 0,
+        "valid_intervals": 12902,
+        "over_review_days": 1405,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-11",
+        "cases": 11258,
+        "timely_yes": 10920,
+        "timely_no": 338,
+        "timely_unknown": 0,
+        "valid_intervals": 11258,
+        "over_review_days": 1647,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2014-12",
+        "cases": 11684,
+        "timely_yes": 11254,
+        "timely_no": 430,
+        "timely_unknown": 0,
+        "valid_intervals": 11684,
+        "over_review_days": 1151,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-01",
+        "cases": 12630,
+        "timely_yes": 12245,
+        "timely_no": 385,
+        "timely_unknown": 0,
+        "valid_intervals": 12630,
+        "over_review_days": 1108,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-02",
+        "cases": 12685,
+        "timely_yes": 12283,
+        "timely_no": 402,
+        "timely_unknown": 0,
+        "valid_intervals": 12685,
+        "over_review_days": 1232,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-03",
+        "cases": 14519,
+        "timely_yes": 14087,
+        "timely_no": 432,
+        "timely_unknown": 0,
+        "valid_intervals": 14519,
+        "over_review_days": 1436,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-04",
+        "cases": 13759,
+        "timely_yes": 13306,
+        "timely_no": 453,
+        "timely_unknown": 0,
+        "valid_intervals": 13759,
+        "over_review_days": 1079,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-05",
+        "cases": 13688,
+        "timely_yes": 13311,
+        "timely_no": 377,
+        "timely_unknown": 0,
+        "valid_intervals": 13688,
+        "over_review_days": 1007,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-06",
+        "cases": 14521,
+        "timely_yes": 14106,
+        "timely_no": 415,
+        "timely_unknown": 0,
+        "valid_intervals": 14521,
+        "over_review_days": 996,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-07",
+        "cases": 15921,
+        "timely_yes": 15455,
+        "timely_no": 466,
+        "timely_unknown": 0,
+        "valid_intervals": 15921,
+        "over_review_days": 1245,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-08",
+        "cases": 15771,
+        "timely_yes": 15346,
+        "timely_no": 425,
+        "timely_unknown": 0,
+        "valid_intervals": 15771,
+        "over_review_days": 2601,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-09",
+        "cases": 14339,
+        "timely_yes": 13973,
+        "timely_no": 366,
+        "timely_unknown": 0,
+        "valid_intervals": 14339,
+        "over_review_days": 1027,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-10",
+        "cases": 14904,
+        "timely_yes": 14499,
+        "timely_no": 405,
+        "timely_unknown": 0,
+        "valid_intervals": 14904,
+        "over_review_days": 1803,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-11",
+        "cases": 12899,
+        "timely_yes": 12500,
+        "timely_no": 399,
+        "timely_unknown": 0,
+        "valid_intervals": 12899,
+        "over_review_days": 1119,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2015-12",
+        "cases": 12884,
+        "timely_yes": 12537,
+        "timely_no": 347,
+        "timely_unknown": 0,
+        "valid_intervals": 12884,
+        "over_review_days": 904,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-01",
+        "cases": 13842,
+        "timely_yes": 13383,
+        "timely_no": 459,
+        "timely_unknown": 0,
+        "valid_intervals": 13842,
+        "over_review_days": 1009,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-02",
+        "cases": 14147,
+        "timely_yes": 13721,
+        "timely_no": 426,
+        "timely_unknown": 0,
+        "valid_intervals": 14147,
+        "over_review_days": 875,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-03",
+        "cases": 16618,
+        "timely_yes": 16112,
+        "timely_no": 506,
+        "timely_unknown": 0,
+        "valid_intervals": 16618,
+        "over_review_days": 926,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-04",
+        "cases": 15608,
+        "timely_yes": 15167,
+        "timely_no": 441,
+        "timely_unknown": 0,
+        "valid_intervals": 15608,
+        "over_review_days": 800,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-05",
+        "cases": 15519,
+        "timely_yes": 15097,
+        "timely_no": 422,
+        "timely_unknown": 0,
+        "valid_intervals": 15519,
+        "over_review_days": 1123,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-06",
+        "cases": 16071,
+        "timely_yes": 15645,
+        "timely_no": 426,
+        "timely_unknown": 0,
+        "valid_intervals": 16071,
+        "over_review_days": 1293,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-07",
+        "cases": 16044,
+        "timely_yes": 15639,
+        "timely_no": 405,
+        "timely_unknown": 0,
+        "valid_intervals": 16044,
+        "over_review_days": 1104,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-08",
+        "cases": 17697,
+        "timely_yes": 17180,
+        "timely_no": 517,
+        "timely_unknown": 0,
+        "valid_intervals": 17697,
+        "over_review_days": 1528,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-09",
+        "cases": 17587,
+        "timely_yes": 16866,
+        "timely_no": 721,
+        "timely_unknown": 0,
+        "valid_intervals": 17587,
+        "over_review_days": 1472,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-10",
+        "cases": 17821,
+        "timely_yes": 16898,
+        "timely_no": 923,
+        "timely_unknown": 0,
+        "valid_intervals": 17821,
+        "over_review_days": 1388,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-11",
+        "cases": 15209,
+        "timely_yes": 14394,
+        "timely_no": 815,
+        "timely_unknown": 0,
+        "valid_intervals": 15209,
+        "over_review_days": 1159,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2016-12",
+        "cases": 15342,
+        "timely_yes": 14672,
+        "timely_no": 670,
+        "timely_unknown": 0,
+        "valid_intervals": 15342,
+        "over_review_days": 957,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-01",
+        "cases": 21011,
+        "timely_yes": 20250,
+        "timely_no": 761,
+        "timely_unknown": 0,
+        "valid_intervals": 21011,
+        "over_review_days": 1439,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-02",
+        "cases": 18120,
+        "timely_yes": 17470,
+        "timely_no": 650,
+        "timely_unknown": 0,
+        "valid_intervals": 18120,
+        "over_review_days": 981,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-03",
+        "cases": 19768,
+        "timely_yes": 19127,
+        "timely_no": 641,
+        "timely_unknown": 0,
+        "valid_intervals": 19768,
+        "over_review_days": 883,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-04",
+        "cases": 18524,
+        "timely_yes": 18070,
+        "timely_no": 454,
+        "timely_unknown": 0,
+        "valid_intervals": 18524,
+        "over_review_days": 962,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-05",
+        "cases": 19285,
+        "timely_yes": 18404,
+        "timely_no": 881,
+        "timely_unknown": 0,
+        "valid_intervals": 19285,
+        "over_review_days": 1208,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-06",
+        "cases": 18544,
+        "timely_yes": 18145,
+        "timely_no": 399,
+        "timely_unknown": 0,
+        "valid_intervals": 18544,
+        "over_review_days": 1030,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-07",
+        "cases": 20403,
+        "timely_yes": 20011,
+        "timely_no": 392,
+        "timely_unknown": 0,
+        "valid_intervals": 20403,
+        "over_review_days": 605,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-08",
+        "cases": 21362,
+        "timely_yes": 20899,
+        "timely_no": 463,
+        "timely_unknown": 0,
+        "valid_intervals": 21362,
+        "over_review_days": 584,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-09",
+        "cases": 27389,
+        "timely_yes": 27061,
+        "timely_no": 328,
+        "timely_unknown": 0,
+        "valid_intervals": 27389,
+        "over_review_days": 1112,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-10",
+        "cases": 20531,
+        "timely_yes": 20168,
+        "timely_no": 363,
+        "timely_unknown": 0,
+        "valid_intervals": 20531,
+        "over_review_days": 1034,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      },
+      {
+        "month": "2017-11",
+        "cases": 2841,
+        "timely_yes": 2841,
+        "timely_no": 0,
+        "timely_unknown": 0,
+        "valid_intervals": 2841,
+        "over_review_days": 1,
+        "negative_intervals": 0,
+        "invalid_dates": 0
+      }
+    ],
+    "products": [
+      {
+        "product": "Mortgage",
+        "cases": 242194,
+        "timely_yes": 237206,
+        "timely_no": 4988,
+        "timely_unknown": 0,
+        "valid_intervals": 240661,
+        "over_review_days": 18455,
+        "negative_intervals": 1533
+      },
+      {
+        "product": "Debt collection",
+        "cases": 171567,
+        "timely_yes": 159525,
+        "timely_no": 12042,
+        "timely_unknown": 0,
+        "valid_intervals": 169811,
+        "over_review_days": 20218,
+        "negative_intervals": 1756
+      },
+      {
+        "product": "Credit reporting",
+        "cases": 140424,
+        "timely_yes": 140124,
+        "timely_no": 300,
+        "timely_unknown": 0,
+        "valid_intervals": 138692,
+        "over_review_days": 19039,
+        "negative_intervals": 1732
+      },
+      {
+        "product": "Credit card",
+        "cases": 89190,
+        "timely_yes": 88208,
+        "timely_no": 982,
+        "timely_unknown": 0,
+        "valid_intervals": 88028,
+        "over_review_days": 5174,
+        "negative_intervals": 1162
+      },
+      {
+        "product": "Bank account or service",
+        "cases": 86207,
+        "timely_yes": 83979,
+        "timely_no": 2228,
+        "timely_unknown": 0,
+        "valid_intervals": 85807,
+        "over_review_days": 4731,
+        "negative_intervals": 400
+      },
+      {
+        "product": "Credit reporting, credit repair services, or other personal consumer reports",
+        "cases": 59186,
+        "timely_yes": 58264,
+        "timely_no": 922,
+        "timely_unknown": 0,
+        "valid_intervals": 59186,
+        "over_review_days": 1170,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Student loan",
+        "cases": 38612,
+        "timely_yes": 38118,
+        "timely_no": 494,
+        "timely_unknown": 0,
+        "valid_intervals": 38387,
+        "over_review_days": 2649,
+        "negative_intervals": 225
+      },
+      {
+        "product": "Consumer Loan",
+        "cases": 31608,
+        "timely_yes": 30359,
+        "timely_no": 1249,
+        "timely_unknown": 0,
+        "valid_intervals": 31470,
+        "over_review_days": 3317,
+        "negative_intervals": 138
+      },
+      {
+        "product": "Credit card or prepaid card",
+        "cases": 11921,
+        "timely_yes": 11845,
+        "timely_no": 76,
+        "timely_unknown": 0,
+        "valid_intervals": 11921,
+        "over_review_days": 529,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Checking or savings account",
+        "cases": 9947,
+        "timely_yes": 9833,
+        "timely_no": 114,
+        "timely_unknown": 0,
+        "valid_intervals": 9947,
+        "over_review_days": 400,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Payday loan",
+        "cases": 5546,
+        "timely_yes": 4944,
+        "timely_no": 602,
+        "timely_unknown": 0,
+        "valid_intervals": 5520,
+        "over_review_days": 864,
+        "negative_intervals": 26
+      },
+      {
+        "product": "Money transfers",
+        "cases": 5354,
+        "timely_yes": 5208,
+        "timely_no": 146,
+        "timely_unknown": 0,
+        "valid_intervals": 5274,
+        "over_review_days": 291,
+        "negative_intervals": 80
+      },
+      {
+        "product": "Prepaid card",
+        "cases": 3819,
+        "timely_yes": 3769,
+        "timely_no": 50,
+        "timely_unknown": 0,
+        "valid_intervals": 3819,
+        "over_review_days": 992,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Vehicle loan or lease",
+        "cases": 2873,
+        "timely_yes": 2774,
+        "timely_no": 99,
+        "timely_unknown": 0,
+        "valid_intervals": 2873,
+        "over_review_days": 145,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Payday loan, title loan, or personal loan",
+        "cases": 2245,
+        "timely_yes": 2084,
+        "timely_no": 161,
+        "timely_unknown": 0,
+        "valid_intervals": 2245,
+        "over_review_days": 237,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Money transfer, virtual currency, or money service",
+        "cases": 2213,
+        "timely_yes": 2175,
+        "timely_no": 38,
+        "timely_unknown": 0,
+        "valid_intervals": 2213,
+        "over_review_days": 119,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Other financial service",
+        "cases": 1059,
+        "timely_yes": 945,
+        "timely_no": 114,
+        "timely_unknown": 0,
+        "valid_intervals": 1059,
+        "over_review_days": 229,
+        "negative_intervals": 0
+      },
+      {
+        "product": "Virtual currency",
+        "cases": 18,
+        "timely_yes": 16,
+        "timely_no": 2,
+        "timely_unknown": 0,
+        "valid_intervals": 18,
+        "over_review_days": 3,
+        "negative_intervals": 0
+      }
+    ],
+    "review_queue": [
+      {
+        "complaint_id": "31504",
+        "product": "Credit card",
+        "received": "2012-04-14",
+        "sent": "2017-08-28",
+        "intake_days": 1962,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "183885",
+        "product": "Credit reporting",
+        "received": "2012-11-08",
+        "sent": "2017-08-28",
+        "intake_days": 1754,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "187479",
+        "product": "Credit reporting",
+        "received": "2012-11-09",
+        "sent": "2017-08-28",
+        "intake_days": 1753,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "245755",
+        "product": "Bank account or service",
+        "received": "2013-01-18",
+        "sent": "2017-06-19",
+        "intake_days": 1613,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "379744",
+        "product": "Credit reporting",
+        "received": "2013-04-10",
+        "sent": "2017-08-28",
+        "intake_days": 1601,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "418979",
+        "product": "Mortgage",
+        "received": "2013-05-29",
+        "sent": "2017-08-29",
+        "intake_days": 1553,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "571656",
+        "product": "Debt collection",
+        "received": "2013-10-25",
+        "sent": "2017-09-15",
+        "intake_days": 1421,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "464190",
+        "product": "Debt collection",
+        "received": "2013-07-23",
+        "sent": "2017-05-18",
+        "intake_days": 1395,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "495113",
+        "product": "Debt collection",
+        "received": "2013-08-07",
+        "sent": "2017-05-03",
+        "intake_days": 1365,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "718767",
+        "product": "Credit reporting",
+        "received": "2014-02-18",
+        "sent": "2017-08-11",
+        "intake_days": 1270,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "871672",
+        "product": "Credit card",
+        "received": "2014-05-28",
+        "sent": "2017-08-28",
+        "intake_days": 1188,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "950192",
+        "product": "Debt collection",
+        "received": "2014-07-23",
+        "sent": "2017-08-02",
+        "intake_days": 1106,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "965957",
+        "product": "Mortgage",
+        "received": "2014-08-02",
+        "sent": "2017-04-27",
+        "intake_days": 999,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "196439",
+        "product": "Credit card",
+        "received": "2012-11-23",
+        "sent": "2015-08-13",
+        "intake_days": 993,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1245498",
+        "product": "Debt collection",
+        "received": "2015-02-18",
+        "sent": "2017-10-24",
+        "intake_days": 979,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1041388",
+        "product": "Debt collection",
+        "received": "2014-09-23",
+        "sent": "2017-05-09",
+        "intake_days": 959,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1111991",
+        "product": "Mortgage",
+        "received": "2014-11-12",
+        "sent": "2017-05-09",
+        "intake_days": 909,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1185067",
+        "product": "Debt collection",
+        "received": "2015-01-07",
+        "sent": "2017-05-11",
+        "intake_days": 855,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "541902",
+        "product": "Debt collection",
+        "received": "2013-09-25",
+        "sent": "2016-01-05",
+        "intake_days": 832,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1336237",
+        "product": "Mortgage",
+        "received": "2015-04-18",
+        "sent": "2017-06-09",
+        "intake_days": 783,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1272543",
+        "product": "Other financial service",
+        "received": "2015-03-08",
+        "sent": "2017-04-26",
+        "intake_days": 780,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1308151",
+        "product": "Debt collection",
+        "received": "2015-03-31",
+        "sent": "2017-04-24",
+        "intake_days": 755,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "746447",
+        "product": "Debt collection",
+        "received": "2014-03-06",
+        "sent": "2016-02-18",
+        "intake_days": 714,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "442751",
+        "product": "Mortgage",
+        "received": "2013-06-26",
+        "sent": "2015-06-09",
+        "intake_days": 713,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "756515",
+        "product": "Mortgage",
+        "received": "2014-03-13",
+        "sent": "2016-02-22",
+        "intake_days": 711,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "10231",
+        "product": "Mortgage",
+        "received": "2012-01-05",
+        "sent": "2013-11-18",
+        "intake_days": 683,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "14707",
+        "product": "Mortgage",
+        "received": "2012-01-18",
+        "sent": "2013-11-19",
+        "intake_days": 671,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1419511",
+        "product": "Other financial service",
+        "received": "2015-06-12",
+        "sent": "2017-03-16",
+        "intake_days": 643,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "14713",
+        "product": "Mortgage",
+        "received": "2012-01-18",
+        "sent": "2013-10-18",
+        "intake_days": 639,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "16453",
+        "product": "Mortgage",
+        "received": "2012-01-24",
+        "sent": "2013-10-18",
+        "intake_days": 633,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "17383",
+        "product": "Mortgage",
+        "received": "2012-01-26",
+        "sent": "2013-10-18",
+        "intake_days": 631,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "18110",
+        "product": "Credit card",
+        "received": "2012-01-27",
+        "sent": "2013-10-18",
+        "intake_days": 630,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "18523",
+        "product": "Mortgage",
+        "received": "2012-01-30",
+        "sent": "2013-10-18",
+        "intake_days": 627,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "18963",
+        "product": "Mortgage",
+        "received": "2012-01-31",
+        "sent": "2013-10-18",
+        "intake_days": 626,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "19618",
+        "product": "Mortgage",
+        "received": "2012-02-01",
+        "sent": "2013-10-18",
+        "intake_days": 625,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "20137",
+        "product": "Mortgage",
+        "received": "2012-02-03",
+        "sent": "2013-10-18",
+        "intake_days": 623,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "20966",
+        "product": "Credit card",
+        "received": "2012-02-07",
+        "sent": "2013-10-18",
+        "intake_days": 619,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "22124",
+        "product": "Mortgage",
+        "received": "2012-02-09",
+        "sent": "2013-10-18",
+        "intake_days": 617,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "23017",
+        "product": "Mortgage",
+        "received": "2012-02-13",
+        "sent": "2013-10-18",
+        "intake_days": 613,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "23350",
+        "product": "Mortgage",
+        "received": "2012-02-14",
+        "sent": "2013-10-18",
+        "intake_days": 612,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "24608",
+        "product": "Mortgage",
+        "received": "2012-02-17",
+        "sent": "2013-10-18",
+        "intake_days": 609,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1328746",
+        "product": "Mortgage",
+        "received": "2015-04-14",
+        "sent": "2016-12-12",
+        "intake_days": 608,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "40297",
+        "product": "Bank account or service",
+        "received": "2012-03-23",
+        "sent": "2013-11-19",
+        "intake_days": 606,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "25046",
+        "product": "Mortgage",
+        "received": "2012-02-21",
+        "sent": "2013-10-18",
+        "intake_days": 605,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "692786",
+        "product": "Debt collection",
+        "received": "2014-01-30",
+        "sent": "2015-09-23",
+        "intake_days": 601,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "44756",
+        "product": "Consumer Loan",
+        "received": "2012-04-06",
+        "sent": "2013-11-18",
+        "intake_days": 591,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "32420",
+        "product": "Mortgage",
+        "received": "2012-03-08",
+        "sent": "2013-10-18",
+        "intake_days": 589,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "32421",
+        "product": "Mortgage",
+        "received": "2012-03-08",
+        "sent": "2013-10-18",
+        "intake_days": 589,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1029622",
+        "product": "Debt collection",
+        "received": "2014-09-15",
+        "sent": "2016-04-25",
+        "intake_days": 588,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "66973",
+        "product": "Bank account or service",
+        "received": "2012-04-27",
+        "sent": "2013-12-06",
+        "intake_days": 588,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1030911",
+        "product": "Debt collection",
+        "received": "2014-09-16",
+        "sent": "2016-04-25",
+        "intake_days": 587,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "68936",
+        "product": "Consumer Loan",
+        "received": "2012-03-10",
+        "sent": "2013-10-18",
+        "intake_days": 587,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1035184",
+        "product": "Debt collection",
+        "received": "2014-09-18",
+        "sent": "2016-04-25",
+        "intake_days": 585,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "57619",
+        "product": "Bank account or service",
+        "received": "2012-04-13",
+        "sent": "2013-11-18",
+        "intake_days": 584,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "35761",
+        "product": "Bank account or service",
+        "received": "2012-03-15",
+        "sent": "2013-10-18",
+        "intake_days": 582,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "60577",
+        "product": "Mortgage",
+        "received": "2012-04-18",
+        "sent": "2013-11-18",
+        "intake_days": 579,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "107704",
+        "product": "Mortgage",
+        "received": "2012-06-25",
+        "sent": "2014-01-24",
+        "intake_days": 578,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "61427",
+        "product": "Mortgage",
+        "received": "2012-04-19",
+        "sent": "2013-11-18",
+        "intake_days": 578,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "62499",
+        "product": "Mortgage",
+        "received": "2012-04-20",
+        "sent": "2013-11-18",
+        "intake_days": 577,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "38035",
+        "product": "Mortgage",
+        "received": "2012-03-21",
+        "sent": "2013-10-18",
+        "intake_days": 576,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "39831",
+        "product": "Credit card",
+        "received": "2012-03-22",
+        "sent": "2013-10-18",
+        "intake_days": 575,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1143469",
+        "product": "Debt collection",
+        "received": "2014-12-04",
+        "sent": "2016-06-29",
+        "intake_days": 573,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "68645",
+        "product": "Bank account or service",
+        "received": "2012-05-01",
+        "sent": "2013-11-25",
+        "intake_days": 573,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "792262",
+        "product": "Debt collection",
+        "received": "2014-04-03",
+        "sent": "2015-10-27",
+        "intake_days": 572,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "655751",
+        "product": "Debt collection",
+        "received": "2014-01-06",
+        "sent": "2015-07-31",
+        "intake_days": 571,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "66079",
+        "product": "Mortgage",
+        "received": "2012-04-26",
+        "sent": "2013-11-18",
+        "intake_days": 571,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1177352",
+        "product": "Debt collection",
+        "received": "2014-12-31",
+        "sent": "2016-07-21",
+        "intake_days": 568,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1065650",
+        "product": "Debt collection",
+        "received": "2014-10-09",
+        "sent": "2016-04-25",
+        "intake_days": 564,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1250855",
+        "product": "Debt collection",
+        "received": "2015-02-21",
+        "sent": "2016-09-02",
+        "intake_days": 559,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1615753",
+        "product": "Debt collection",
+        "received": "2015-10-20",
+        "sent": "2017-04-24",
+        "intake_days": 552,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1081535",
+        "product": "Debt collection",
+        "received": "2014-10-22",
+        "sent": "2016-04-25",
+        "intake_days": 551,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "101706",
+        "product": "Mortgage",
+        "received": "2012-06-14",
+        "sent": "2013-12-11",
+        "intake_days": 545,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "65002",
+        "product": "Credit card",
+        "received": "2012-04-25",
+        "sent": "2013-10-18",
+        "intake_days": 541,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "542196",
+        "product": "Debt collection",
+        "received": "2013-09-25",
+        "sent": "2015-03-19",
+        "intake_days": 540,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1359608",
+        "product": "Debt collection",
+        "received": "2015-05-04",
+        "sent": "2016-10-24",
+        "intake_days": 539,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1104370",
+        "product": "Debt collection",
+        "received": "2014-11-06",
+        "sent": "2016-04-25",
+        "intake_days": 536,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1106087",
+        "product": "Debt collection",
+        "received": "2014-11-06",
+        "sent": "2016-04-25",
+        "intake_days": 536,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1111143",
+        "product": "Debt collection",
+        "received": "2014-11-11",
+        "sent": "2016-04-25",
+        "intake_days": 531,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1119652",
+        "product": "Debt collection",
+        "received": "2014-11-17",
+        "sent": "2016-04-25",
+        "intake_days": 525,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "99999",
+        "product": "Bank account or service",
+        "received": "2012-06-12",
+        "sent": "2013-11-18",
+        "intake_days": 524,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "462401",
+        "product": "Mortgage",
+        "received": "2013-07-21",
+        "sent": "2014-12-23",
+        "intake_days": 520,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1307979",
+        "product": "Debt collection",
+        "received": "2015-03-31",
+        "sent": "2016-08-26",
+        "intake_days": 514,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "267477",
+        "product": "Mortgage",
+        "received": "2013-01-28",
+        "sent": "2014-06-23",
+        "intake_days": 511,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1174486",
+        "product": "Debt collection",
+        "received": "2014-12-30",
+        "sent": "2016-05-23",
+        "intake_days": 510,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "897150",
+        "product": "Debt collection",
+        "received": "2014-06-16",
+        "sent": "2015-10-27",
+        "intake_days": 498,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1156550",
+        "product": "Payday loan",
+        "received": "2014-12-15",
+        "sent": "2016-04-25",
+        "intake_days": 497,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1156551",
+        "product": "Payday loan",
+        "received": "2014-12-15",
+        "sent": "2016-04-25",
+        "intake_days": 497,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "114550",
+        "product": "Mortgage",
+        "received": "2012-07-10",
+        "sent": "2013-11-18",
+        "intake_days": 496,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "830340",
+        "product": "Debt collection",
+        "received": "2014-04-29",
+        "sent": "2015-08-24",
+        "intake_days": 482,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "124431",
+        "product": "Mortgage",
+        "received": "2012-07-25",
+        "sent": "2013-11-18",
+        "intake_days": 481,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1334353",
+        "product": "Bank account or service",
+        "received": "2015-04-17",
+        "sent": "2016-08-10",
+        "intake_days": 481,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1982565",
+        "product": "Consumer Loan",
+        "received": "2016-06-24",
+        "sent": "2017-10-17",
+        "intake_days": 480,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1363479",
+        "product": "Debt collection",
+        "received": "2015-05-06",
+        "sent": "2016-08-26",
+        "intake_days": 478,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1367778",
+        "product": "Debt collection",
+        "received": "2015-05-08",
+        "sent": "2016-08-26",
+        "intake_days": 476,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "1663183",
+        "product": "Debt collection",
+        "received": "2015-11-19",
+        "sent": "2017-03-09",
+        "intake_days": 476,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "258349",
+        "product": "Mortgage",
+        "received": "2013-01-24",
+        "sent": "2014-05-15",
+        "intake_days": 476,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "115896",
+        "product": "Bank account or service",
+        "received": "2012-07-11",
+        "sent": "2013-10-18",
+        "intake_days": 464,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "173936",
+        "product": "Mortgage",
+        "received": "2012-10-18",
+        "sent": "2014-01-24",
+        "intake_days": 463,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "945345",
+        "product": "Debt collection",
+        "received": "2014-07-21",
+        "sent": "2015-10-27",
+        "intake_days": 463,
+        "review_reason": "Routing review; Source timely=No",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      },
+      {
+        "complaint_id": "186266",
+        "product": "Mortgage",
+        "received": "2012-11-02",
+        "sent": "2014-02-07",
+        "intake_days": 462,
+        "review_reason": "Routing review",
+        "owner": "",
+        "review_status": "Not started",
+        "notes": ""
+      }
+    ],
+    "quality_issues": [
+      {
+        "source_row": 20190,
+        "complaint_id": "110441",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 3423,
+        "complaint_id": "110642",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 656260,
+        "complaint_id": "110643",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 379871,
+        "complaint_id": "124962",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 591542,
+        "complaint_id": "126167",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 160021,
+        "complaint_id": "126168",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 157964,
+        "complaint_id": "127654",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 115578,
+        "complaint_id": "136938",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 218062,
+        "complaint_id": "141938",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 51493,
+        "complaint_id": "141941",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 379061,
+        "complaint_id": "15639",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 554577,
+        "complaint_id": "176043",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 218701,
+        "complaint_id": "176050",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 376406,
+        "complaint_id": "176056",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 81442,
+        "complaint_id": "176554",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 49161,
+        "complaint_id": "176581",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 17631,
+        "complaint_id": "176995",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 358850,
+        "complaint_id": "176997",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 604678,
+        "complaint_id": "177013",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 145856,
+        "complaint_id": "177016",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 362433,
+        "complaint_id": "177019",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 540989,
+        "complaint_id": "177021",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 642545,
+        "complaint_id": "177033",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 162551,
+        "complaint_id": "178557",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 233512,
+        "complaint_id": "178559",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 152938,
+        "complaint_id": "178564",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 155456,
+        "complaint_id": "179061",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 229670,
+        "complaint_id": "179064",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 140893,
+        "complaint_id": "179065",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 738312,
+        "complaint_id": "179286",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 216515,
+        "complaint_id": "179302",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 276713,
+        "complaint_id": "179386",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 447807,
+        "complaint_id": "181016",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 227281,
+        "complaint_id": "181018",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 23106,
+        "complaint_id": "181030",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 126362,
+        "complaint_id": "181035",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 340606,
+        "complaint_id": "181527",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 298005,
+        "complaint_id": "182461",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 764854,
+        "complaint_id": "182475",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 447856,
+        "complaint_id": "182486",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 213166,
+        "complaint_id": "182488",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 600324,
+        "complaint_id": "183375",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 126098,
+        "complaint_id": "184367",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 311934,
+        "complaint_id": "184380",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 549289,
+        "complaint_id": "184468",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 688594,
+        "complaint_id": "184530",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 336307,
+        "complaint_id": "184543",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 611614,
+        "complaint_id": "184555",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 150023,
+        "complaint_id": "185111",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 689256,
+        "complaint_id": "185130",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 747546,
+        "complaint_id": "185144",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 364643,
+        "complaint_id": "185617",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 616900,
+        "complaint_id": "185627",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 82455,
+        "complaint_id": "185637",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 7194,
+        "complaint_id": "185639",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 454798,
+        "complaint_id": "186133",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 24469,
+        "complaint_id": "186137",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 363204,
+        "complaint_id": "187920",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 496239,
+        "complaint_id": "188718",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 306808,
+        "complaint_id": "189921",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 297269,
+        "complaint_id": "189959",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 124853,
+        "complaint_id": "189963",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 454165,
+        "complaint_id": "190889",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 248004,
+        "complaint_id": "190898",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 274559,
+        "complaint_id": "190919",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 469246,
+        "complaint_id": "190920",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 403020,
+        "complaint_id": "190922",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 294025,
+        "complaint_id": "192053",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 222841,
+        "complaint_id": "192055",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 576316,
+        "complaint_id": "192056",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 719324,
+        "complaint_id": "192065",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 565047,
+        "complaint_id": "192758",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 127567,
+        "complaint_id": "192825",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 613470,
+        "complaint_id": "192833",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 526313,
+        "complaint_id": "192835",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 497861,
+        "complaint_id": "195286",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 11382,
+        "complaint_id": "195811",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 230169,
+        "complaint_id": "195813",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 573056,
+        "complaint_id": "196665",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 124686,
+        "complaint_id": "196734",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 109369,
+        "complaint_id": "198785",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 395840,
+        "complaint_id": "199752",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 562614,
+        "complaint_id": "199769",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 319587,
+        "complaint_id": "199776",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 770481,
+        "complaint_id": "199780",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 326225,
+        "complaint_id": "201574",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 226298,
+        "complaint_id": "201590",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 669968,
+        "complaint_id": "201591",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 27393,
+        "complaint_id": "201594",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 687354,
+        "complaint_id": "201643",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 701616,
+        "complaint_id": "201687",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 221657,
+        "complaint_id": "202448",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 200658,
+        "complaint_id": "202451",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 604497,
+        "complaint_id": "202456",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 417752,
+        "complaint_id": "203331",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 420955,
+        "complaint_id": "203342",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 395623,
+        "complaint_id": "203373",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 772310,
+        "complaint_id": "203380",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 166960,
+        "complaint_id": "203382",
+        "issue": "Sent before received"
+      },
+      {
+        "source_row": 435311,
+        "complaint_id": "204337",
+        "issue": "Sent before received"
+      }
+    ],
+    "unmatched_notes": []
+  }
+}
