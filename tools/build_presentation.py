@@ -12,9 +12,13 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 
 rl_config.useA85=False
 ROOT=Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT/'src'))
+from publication import current_output
+RESULTS=current_output(ROOT/'results')
 OUT=ROOT/'deliverables'; DOCS=ROOT/'docs'
 OUT.mkdir(exist_ok=True);DOCS.mkdir(exist_ok=True)
-a=json.loads((ROOT/'results/analysis.json').read_text())
+a=json.loads((RESULTS/'analysis.json').read_text())
 m=a['metrics']; r=a['reports']
 navy='#18283F'; teal='#087F73'; muted='#65758A'; amber='#BA6A13'
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10,'text.color':navy,'axes.labelcolor':muted,'xtick.color':muted,'ytick.color':muted,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False})
@@ -65,7 +69,7 @@ An operations reporting project using **{m['cases']:,} real complaint records** 
 
 - [Two-page management briefing](deliverables/case-study.pdf)
 - [Excel workbook](deliverables/complaint-operations-review.xlsx) — overview, monthly report and 100 editable review examples
-- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [14 automated tests](tests/test_workflow.py)
+- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [25 automated tests](tests)
 - [Method](docs/METHOD.md), [data dictionary](docs/DATA_DICTIONARY.md), [Excel / notes guide](docs/EXCEL_GUIDE.md), [verification](docs/QA_REPORT.md)
 - [Five-minute walkthrough](docs/PROJECT_WALKTHROUGH.md), [source and license](docs/SOURCES.md)
 
@@ -99,7 +103,7 @@ python -m unittest discover -s tests -v
 
 The downloader uses the public Kaggle dataset endpoint. If its access policy changes, download `Consumer_Complaints.csv` manually from the linked Kaggle page into `data/raw/`. The delivered source fingerprint is recorded in `results/analysis.json`; upstream snapshots may change.
 
-Generated locally: `results/complaints.sqlite`, the complete `results/review_queue.csv`, `quality_issues.csv`, and all aggregate reports. Raw data, database and full row-level exports are excluded from the compact repository. The delivered workbook shows only 100 selected review examples. They are not a representative sample.
+Generated locally inside the published snapshot: `complaints.sqlite`, the complete `review_queue.csv`, `quality_issues.csv`, and all aggregate reports. Raw data, database and full row-level exports are excluded from the compact repository. The delivered workbook shows only 100 selected review examples. They are not a representative sample.
 
 ### Carry notes into the next run
 
@@ -136,6 +140,7 @@ python tools/package_project.py
 
 [Kaggle dataset](https://www.kaggle.com/datasets/sebastienverpile/consumercomplaintsdata), labeled CC0 Public Domain, originally the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). The snapshot covers Dec 1, 2011–Nov 15, 2017. Code: MIT. Derived exports omit narratives, company names, ZIP, state and tags. Public complaints are not a statistical sample of all consumer experiences.
 '''
+readme += '\n## Current result versions\n\nNew runs publish results/latest.json. Run `python src/publication.py` to locate the current snapshot before opening generated databases or CSVs. Root-level result files are historical references. See [result versions and recovery](docs/RESULT_VERSIONS.md).\n'
 (ROOT/'README.md').write_text(readme,encoding='utf-8')
 (DOCS/'METHOD.md').write_text('''# Method and operating assumptions
 
@@ -228,7 +233,7 @@ The CFPB explains that these public complaints are not a statistical sample and 
 3. **Code:** Show `src/pipeline.py` staging and ID rules. Open `sql/channels.sql` for CTEs, window functions and a valid P90 denominator. Distinguish the source response flag from routing days.
 4. **Deliverable:** Open Excel overview, then Monthly and Review queue. Explain why the partial month is labeled and why a 100-case selection cannot represent all flagged complaints.
 5. **Handoff:** Enter an owner, status and note on a copy of the workbook. Export that sheet, import its CSV, rerun, and inspect merged notes. Never publish real annotations to the public repository.
-6. **Evidence:** Run 14 tests, inspect seven full-data reconciliation controls and the independent output verification. Explain the native-Excel limitation plainly.
+6. **Evidence:** Run 25 tests, inspect seven full-data reconciliation controls and the independent output verification. Explain the native-Excel limitation plainly.
 
 ## Relevant paid work
 CSV cleanup and validation; SQL report preparation; recurring spreadsheet refreshes; exception-list handoffs; documentation of repeatable admin workflows. Ask a prospective client about column definitions, review thresholds, refresh frequency and note ownership before adapting the project.
@@ -242,7 +247,7 @@ Title: Complaint Intake Review | Python, SQL & Excel
 
 Role: Portfolio project owner | Data cleaning, SQL reporting and Excel workflow
 
-Description: Personal portfolio project using 903,983 real Kaggle/CFPB complaint records. Python validates IDs and dates, and SQLite creates channel, monthly and review-queue reports. The Excel workbook includes formulas, a chart and 100 review examples. A CSV import preserves reviewer notes across runs. Includes a two-page briefing, full documentation and 14 automated tests. Historical public data; seven-day routing review is a demo rule, not a regulatory SLA.
+Description: Personal portfolio project using 903,983 real Kaggle/CFPB complaint records. Python validates IDs and dates, and SQLite creates channel, monthly and review-queue reports. The Excel workbook includes formulas, a chart and 100 review examples. A CSV import preserves reviewer notes across runs. Includes a two-page briefing, full documentation and 25 automated tests. Historical public data; seven-day routing review is a demo rule, not a regulatory SLA.
 
 Skills: Python; SQL; Microsoft Excel; Data Cleaning; Data Analysis.
 
@@ -261,3 +266,6 @@ PDF caption: Two-page briefing: findings, review-note handoff, tests, source def
 Read the project README and docs before adapting to a new source. The 100 review examples are selected historical cases, not a live work queue. No completed review is fabricated.
 ''',encoding='utf-8')
 print(json.dumps({'pdf':str(OUT/'case-study.pdf'),'cover':str(OUT/'portfolio-cover.png'),'documentation':'written'}))
+
+with (DOCS/'EXCEL_GUIDE.md').open('a',encoding='utf-8') as stream:
+    stream.write('\n## Current result versions\n\nRun `python src/publication.py` to locate the current snapshot. Note imports reject truncated or extra fields, duplicate mapped headers and malformed quoting before replacing saved annotations. See [result versions](RESULT_VERSIONS.md).\n')

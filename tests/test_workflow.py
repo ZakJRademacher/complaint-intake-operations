@@ -105,5 +105,33 @@ class WorkflowTests(unittest.TestCase):
             read_notes(self.notes)
 
 
+    def test_malformed_note_import_preserves_existing_text(self):
+        header = 'complaint_id,owner,review_status,notes'
+        key = '1'
+        self.notes.write_text(header+'\n'+key+',Sam,In progress,Keep investigation\n', encoding='utf-8')
+        before = self.notes.read_bytes()
+        duplicate = header + ',' + header.split(',')[-1]
+        imports = [
+            header+'\n'+key+',Sam,In progress\n',
+            header+'\n'+key+',Sam,In progress,Changed,extra\n',
+            duplicate+'\n'+key+',Sam,In progress,Changed,Ignored\n',
+            header+'\n'+key+',Sam,In progress,"unterminated\n',
+        ]
+        for payload in imports:
+            with self.subTest(payload=payload):
+                exported = self.root/'malformed.csv'
+                exported.write_text(payload, encoding='utf-8')
+                with self.assertRaises((ValueError, csv.Error)):
+                    update(exported, self.notes)
+                self.assertEqual(self.notes.read_bytes(), before)
+
+    def test_complete_note_row_allows_intentional_blank_text(self):
+        self.notes.write_text('complaint_id,owner,review_status,notes'+'\n'+'1'+',Sam,In progress,Old note\n', encoding='utf-8')
+        exported = self.root/'clear-note.csv'
+        exported.write_text('complaint_id,owner,review_status,notes'+'\n'+'1'+',Sam,In progress,\n', encoding='utf-8')
+        update(exported, self.notes)
+        self.assertNotIn('Old note', self.notes.read_text(encoding='utf-8-sig'))
+
+
 if __name__=='__main__':
     unittest.main()

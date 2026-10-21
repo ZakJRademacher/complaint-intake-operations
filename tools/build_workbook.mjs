@@ -5,7 +5,13 @@ import {pathToFileURL} from 'node:url';
 const require=createRequire(process.env.RETAIL_ARTIFACT_ROOT ? path.join(process.env.RETAIL_ARTIFACT_ROOT,'package.json') : import.meta.url);
 const {Workbook,SpreadsheetFile}=await import(pathToFileURL(require.resolve('@oai/artifact-tool')));
 const root=path.resolve(process.argv[2]);
-const input=JSON.parse(await fs.readFile(path.join(root,'results/analysis.json'),'utf8'));
+let results=path.join(root,'results');
+try {
+ const pointer=JSON.parse(await fs.readFile(path.join(results,'latest.json'),'utf8'));
+ if(pointer.contract_version!==1 || !/^\d{8}T\d{6}Z_[0-9a-f]{12}$/.test(pointer.snapshot)) throw new Error('Invalid results pointer');
+ results=path.join(results,'snapshots',pointer.snapshot);
+} catch(error) { if(error.code!=='ENOENT') throw error; }
+const input=JSON.parse(await fs.readFile(path.join(results,'analysis.json'),'utf8'));
 const m=input.metrics,r=input.reports;
 const wb=Workbook.create();
 const main=wb.worksheets.add('Operations review'),monthly=wb.worksheets.add('Monthly'),queue=wb.worksheets.add('Review queue');

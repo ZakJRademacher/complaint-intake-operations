@@ -7,3 +7,10 @@ __pycache__/
 *.pyc
 tmp/
 node_modules/
+
+# Locally published result versions; static reference exports stay tracked.
+results/snapshots/
+results/.staging_*
+results/.refresh.lock
+results/latest.json
+results/latest_*.tmp

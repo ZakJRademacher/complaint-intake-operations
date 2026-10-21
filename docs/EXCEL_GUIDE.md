@@ -20,3 +20,9 @@ The importer finds the required headers even below the sheet's title rows. It va
 
 ## Validation
 The workbook builder recalculates formulas, checks total records and timely rate against Python, changes an input and restores it, and exercises the resolution guard. It scans formula errors and renders all three sheets for visual review. Native desktop Excel was not available for a second recalculation test. The pipeline and CSV handoff remain independent of the workbook authoring package.
+
+## Current published results
+
+Run `python src/publication.py` to locate the current snapshot before opening generated CSVs. The root-level result files are reference examples when a latest.json pointer exists. See [result versions](RESULT_VERSIONS.md).
+
+Malformed note rows, duplicate mapped headers and invalid CSV quoting are rejected before the saved note file is replaced. A complete, valid In progress row can intentionally clear its note text; a truncated row cannot. Untouched template rows continue to preserve previous notes.

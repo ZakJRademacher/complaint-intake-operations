@@ -10,7 +10,7 @@ An operations reporting project using **903,983 real complaint records** from a 
 
 - [Two-page management briefing](deliverables/case-study.pdf)
 - [Excel workbook](deliverables/complaint-operations-review.xlsx) — overview, monthly report and 100 editable review examples
-- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [14 automated tests](tests/test_workflow.py)
+- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [25 automated tests](tests)
 - [Method](docs/METHOD.md), [data dictionary](docs/DATA_DICTIONARY.md), [Excel / notes guide](docs/EXCEL_GUIDE.md), [verification](docs/QA_REPORT.md)
 - [Five-minute walkthrough](docs/PROJECT_WALKTHROUGH.md), [source and license](docs/SOURCES.md)
 
@@ -44,7 +44,11 @@ python -m unittest discover -s tests -v
 
 The downloader uses the public Kaggle dataset endpoint. If its access policy changes, download `Consumer_Complaints.csv` manually from the linked Kaggle page into `data/raw/`. The delivered source fingerprint is recorded in `results/analysis.json`; upstream snapshots may change.
 
-Generated locally: `results/complaints.sqlite`, the complete `results/review_queue.csv`, `quality_issues.csv`, and all aggregate reports. Raw data, database and full row-level exports are excluded from the compact repository. The delivered workbook shows only 100 selected review examples. They are not a representative sample.
+Generated locally inside the published snapshot: `complaints.sqlite`, the complete `review_queue.csv`, `quality_issues.csv`, and all aggregate reports. Raw data, database and full row-level exports are excluded from the compact repository. The delivered workbook shows only 100 selected review examples. They are not a representative sample.
+
+## Current results and recovery
+
+New runs publish a complete version through `results/latest.json`. Run `python src/publication.py` to locate the current database, CSVs and analysis record. Checked-in root-level results remain historical reference files. [Versioned results and recovery](docs/RESULT_VERSIONS.md) explains failure handling and rebuilds.
 
 ### Carry notes into the next run
 

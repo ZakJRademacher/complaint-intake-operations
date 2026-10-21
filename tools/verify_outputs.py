@@ -10,10 +10,20 @@ from openpyxl import load_workbook
 from pypdf import PdfReader
 
 ROOT=Path(__file__).resolve().parents[1]
-a=json.loads((ROOT/'results/analysis.json').read_text())
+import argparse
+import sys
+sys.path.insert(0, str(ROOT/'src'))
+from publication import current_output
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source',type=Path,default=ROOT/'data/raw/Consumer_Complaints.csv')
+parser.add_argument('--results',type=Path,default=ROOT/'results')
+args=parser.parse_args()
+RESULTS=current_output(args.results)
+
+a=json.loads((RESULTS/'analysis.json').read_text())
 m=a['metrics']
 columns=['Complaint ID','Date received','Date sent to company','Submitted via','Timely response?']
-d=pd.read_csv(ROOT/'data/raw/Consumer_Complaints.csv',usecols=columns,dtype=str,keep_default_na=False)
+d=pd.read_csv(args.source,usecols=columns,dtype=str,keep_default_na=False)
 received=pd.to_datetime(d['Date received'],format='%m/%d/%Y',errors='coerce')
 sent=pd.to_datetime(d['Date sent to company'],format='%m/%d/%Y',errors='coerce')
 days=(sent-received).dt.days
@@ -22,7 +32,7 @@ yes=(d['Timely response?'].str.strip().str.lower()=='yes')
 no=(d['Timely response?'].str.strip().str.lower()=='no')
 flag=(days<0)|days.isna()|(days>m['review_days'])|~yes
 hasher=hashlib.sha256()
-with (ROOT/'data/raw/Consumer_Complaints.csv').open('rb') as stream:
+with (args.source).open('rb') as stream:
     for chunk in iter(lambda:stream.read(1024*1024),b''):hasher.update(chunk)
 checks={
  'source_fingerprint':hasher.hexdigest()==a['source']['sha256'],
@@ -39,7 +49,7 @@ checks={
 }
 expected=d.groupby('Submitted via').size().to_dict()
 checks['channel_counts']=expected=={x['channel']:x['cases'] for x in a['reports']['channels']}
-with sqlite3.connect(ROOT/'results/complaints.sqlite') as db:
+with sqlite3.connect(RESULTS/'complaints.sqlite') as db:
     checks['sqlite_integrity']=db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'
     checks['source_lineage']=db.execute('SELECT COUNT(*) FROM cases c LEFT JOIN selected s USING(source_row) WHERE s.source_row IS NULL').fetchone()[0]==0
     checks['omitted_narratives']='Consumer complaint narrative' not in str(db.execute('PRAGMA table_info(selected)').fetchall())
