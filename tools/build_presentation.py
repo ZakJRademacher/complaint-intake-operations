@@ -124,7 +124,7 @@ python tools/build_presentation.py
 node tools/build_workbook.mjs /absolute/path/to/complaint-operations
 ```
 
-The workbook builder requires `@oai/artifact-tool`, supplied by a compatible Codex runtime. Set `RETAIL_ARTIFACT_ROOT` to that runtime's Node dependency root when necessary. The checked-in XLSX is ready to inspect; the Python/SQL workflow and tests do not require that optional authoring package. Artifact-tool recalculation was tested; native Excel was not available.
+The workbook builder requires `@oai/artifact-tool`, supplied by a compatible spreadsheet authoring runtime. Set `RETAIL_ARTIFACT_ROOT` to that runtime's Node dependency root when necessary. The checked-in XLSX is ready to inspect; the Python/SQL workflow and tests do not require that optional authoring package. Artifact-tool recalculation was tested; native Excel was not available.
 
 ```sh
 pip install -r requirements-qa.txt

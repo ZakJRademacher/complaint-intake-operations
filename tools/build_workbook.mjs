@@ -1,3 +1,4 @@
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createRequire} from 'node:module';
@@ -92,4 +93,5 @@ for(const [s,range,file] of [[main,'A1:L34','excel-operations-preview.png'],[mon
  const blob=await wb.render({sheetName:s.name,range,scale:1.5,format:'png'});await fs.writeFile(path.join(root,'deliverables',file),new Uint8Array(await blob.arrayBuffer()));
 }
 const output=await SpreadsheetFile.exportXlsx(wb);await output.save(path.join(root,'deliverables/complaint-operations-review.xlsx'));
+execFileSync(process.env.PYTHON || 'python', [path.join(root,'tools/normalize_workbook.py'), path.join(root,'deliverables/complaint-operations-review.xlsx')]);
 console.log(JSON.stringify({caseCount:m.cases,rate:m.timely_rate,errorScan:errors.ndjson}));

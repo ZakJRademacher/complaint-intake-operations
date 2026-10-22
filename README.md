@@ -69,7 +69,7 @@ python tools/build_presentation.py
 node tools/build_workbook.mjs /absolute/path/to/complaint-operations
 ```
 
-The workbook builder requires `@oai/artifact-tool`, supplied by a compatible Codex runtime. Set `RETAIL_ARTIFACT_ROOT` to that runtime's Node dependency root when necessary. The checked-in XLSX is ready to inspect; the Python/SQL workflow and tests do not require that optional authoring package. Artifact-tool recalculation was tested; native Excel was not available.
+The workbook builder requires `@oai/artifact-tool`, supplied by a compatible spreadsheet authoring runtime. Set `RETAIL_ARTIFACT_ROOT` to that runtime's Node dependency root when necessary. The checked-in XLSX is ready to inspect; the Python/SQL workflow and tests do not require that optional authoring package. Artifact-tool recalculation was tested; native Excel was not available.
 
 ```sh
 pip install -r requirements-qa.txt
@@ -84,3 +84,5 @@ python tools/package_project.py
 ## Data and license
 
 [Kaggle dataset](https://www.kaggle.com/datasets/sebastienverpile/consumercomplaintsdata), labeled CC0 Public Domain, originally the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). The snapshot covers Dec 1, 2011–Nov 15, 2017. Code: MIT. Derived exports omit narratives, company names, ZIP, state and tags. Public complaints are not a statistical sample of all consumer experiences.
+
+Workbook authoring also uses Python 3.10+ for display-only theme metadata normalization. Set `PYTHON` to its executable if `python` is unavailable. This helper preserves native workbook parts and does not recalculate formulas.

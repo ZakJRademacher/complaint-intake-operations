@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5257,
-      "sha256": "3c7dbe364f26cb92f157eb09758ace0c3501ce749f5ffa5bca63cbcd8a07691c"
+      "bytes": 5501,
+      "sha256": "31556710eefe27823c1d88a93d984d7db63225115588697b609d9ee1bebb7814"
     },
     {
       "path": "data/review_notes.csv",
@@ -61,8 +61,8 @@
     },
     {
       "path": "deliverables/complaint-operations-review.xlsx",
-      "bytes": 30573,
-      "sha256": "1b2ee562ead12b1236e74556ae9ae0d5c865aaeb2bab36d87549038c74b94e8e"
+      "bytes": 30499,
+      "sha256": "0ca32b92bb45e94ea5134a6bab2d8c84804f3d14bc465d3e050e887f973bdcf5"
     },
     {
       "path": "deliverables/excel-monthly-preview.png",
@@ -251,13 +251,18 @@
     },
     {
       "path": "tools/build_presentation.py",
-      "bytes": 28417,
-      "sha256": "6cf8aebd35b28e7b72dd756d537d29e40dfef791df6eae3524e6abfcd9acd105"
+      "bytes": 28433,
+      "sha256": "32c7ae24f917cf24f149e73f95f626a31607a092195bc86c47f03c38da90dd93"
     },
     {
       "path": "tools/build_workbook.mjs",
-      "bytes": 9676,
-      "sha256": "2048c593a92274cf9eec6a52f149bc37494e8305a464d9f2aa1101d8d2b7d71d"
+      "bytes": 9885,
+      "sha256": "4e642f842bfa73e25545abd9ac2f8da80cbabbbd7a681da340cc0acf7502c5a8"
+    },
+    {
+      "path": "tools/normalize_workbook.py",
+      "bytes": 1192,
+      "sha256": "5c7fe1e83d7240c32c6a0b8e55d87d96f45eef0ec70c0c1e10e1e58293bd8895"
     },
     {
       "path": "tools/package_project.py",
