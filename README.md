@@ -1,5 +1,7 @@
 # Complaint Intake & Response Operations
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-31566D?style=flat-square) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square)
+
 **Python · SQLite · Excel · recurring operations reporting**
 
 An operations reporting project using **903,983 real complaint records** from a historical Kaggle mirror of the CFPB database. It converts a large CSV into validated SQL reports and an Excel review queue, and preserves reviewer notes between runs.
