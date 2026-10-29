@@ -19,6 +19,20 @@ FIELDS = ['Complaint ID', 'Date received', 'Date sent to company', 'Product', 'I
 STATUSES = {'Not started', 'In progress', 'Resolved'}
 
 
+def checked_records(stream, required):
+    """Reject ambiguous headers and malformed widths before values are selected."""
+    reader = csv.DictReader(stream)
+    headers = reader.fieldnames or []
+    if not headers or len(headers) != len(set(headers)) or any(not h.strip() for h in headers):
+        raise ValueError('CSV headers must be nonblank and unique')
+    if not set(required) <= set(headers):
+        raise ValueError('CSV is missing required fields')
+    for row in reader:
+        if None in row or any(value is None for value in row.values()):
+            raise ValueError(f'CSV row width does not match its headers at record ending on line {reader.line_num}')
+        yield row
+
+
 def parse_date(value):
     try:
         return datetime.strptime(value.strip(), '%m/%d/%Y').date().isoformat()
@@ -31,10 +45,7 @@ def read_notes(path):
     if not Path(path).exists():
         return notes
     with Path(path).open(encoding='utf-8-sig', newline='') as stream:
-        reader = csv.DictReader(stream)
-        if not {'complaint_id', 'owner', 'review_status', 'notes'} <= set(reader.fieldnames or []):
-            raise ValueError('Review notes must have complaint_id, owner, review_status, notes headers')
-        for row in reader:
+        for row in checked_records(stream, ['complaint_id', 'owner', 'review_status', 'notes']):
             key = row['complaint_id'].strip()
             if not key or not key.isdecimal() or key in notes:
                 raise ValueError('Invalid or duplicate review-note ID: ' + key)
@@ -77,10 +88,7 @@ def _build(source, output, notes_path, review_days=7):
         conn.executemany('INSERT INTO review_notes VALUES (?,?,?,?)', [(key, *value) for key, value in notes.items()])
         rows, invalid_ids, batch = 0, 0, []
         with Path(source).open(encoding='utf-8-sig', newline='') as stream:
-            reader = csv.DictReader(stream)
-            if not set(FIELDS) <= set(reader.fieldnames or []):
-                raise ValueError('Source is missing required fields')
-            for line, record in enumerate(reader, start=2):
+            for line, record in enumerate(checked_records(stream, FIELDS), start=2):
                 rows += 1
                 values = [record[field].strip() for field in FIELDS]
                 key = values[0]

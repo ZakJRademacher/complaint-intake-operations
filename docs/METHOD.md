@@ -16,7 +16,9 @@ Default review rule: interval >7 calendar days, negative/unparseable dates, or s
 ## Notes and safe reruns
 `data/review_notes.csv` is a persistent input, never overwritten by the reporting pipeline. Notes join by Complaint ID. Imports merge by key, retain previously saved IDs not in the import and skip untouched blank Not started rows. Invalid statuses, duplicate import IDs, and Resolved records without owner and note fail before a notes-file write. A successful import writes a temporary file then atomically replaces the notes CSV. There is no erase-via-blank shortcut; edit the notes input deliberately to clear saved annotations. Unmatched note IDs are reported separately, not discarded.
 
-The reporting database is rebuilt in place. Do not run two builds simultaneously or consume its reports while a build is running. Back up edited review notes. A failed run should be corrected and rerun before using its output; the report directory is not an atomic multi-file transaction.
+The reporting database and exports are built in a staging directory and checked before a complete snapshot is published. A refresh lock rejects simultaneous builds. Readers resolve `results/latest.json` once per operation; a failed refresh leaves the prior pointer unchanged. Back up edited review notes and inspect failed staging output before retrying. Checked-in root-level results are historical reference files, not automatically the newest refresh.
+
+Source and notes CSVs reject blank or duplicate headers and malformed row widths before selecting fields. Additional explicitly named source columns remain permitted; only the eight documented fields enter the analysis.
 
 ## Scope
 Historical public snapshot; partial final month; no live backlog, no resolution-time field and no financial advice or lender-quality comparison. Public complaints are not a representative consumer sample. Very long intervals require source verification, not automatic attribution of fault. Excel's 100 examples are the longest nonnegative flagged intervals, not random cases and not the full review population.

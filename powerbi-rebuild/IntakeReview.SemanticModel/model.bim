@@ -1,0 +1,214 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Cases\",\"DataFolder\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:/Users/zakjr/OneDrive/Data Analytics Projects/01 Portfolio Projects/complaint-intake-operations/powerbi-rebuild/data\" meta [IsParameterQuery=true,Type=\"Text\",IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "4360bbf6-dcce-4308-8b52-dff604422127"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Cases",
+        "columns": [
+          {
+            "name": "Complaint ID",
+            "dataType": "string",
+            "lineageTag": "34328a8b-3265-4367-8b3c-ac3f75c5d9e2",
+            "sourceColumn": "Complaint ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Received",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-MM-dd",
+            "lineageTag": "dbf85e14-166d-4ed8-85c7-eaed8c3e7b5e",
+            "sourceColumn": "Received",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "dataType": "string",
+            "lineageTag": "fdcd99a7-75c7-4177-8fd8-e132d53c5a54",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "b152b0e5-5ace-4333-9532-0c76dec81a64",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Channel",
+            "dataType": "string",
+            "lineageTag": "83c1a634-823e-4ec8-8414-7bfb934b888b",
+            "sourceColumn": "Channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Product",
+            "dataType": "string",
+            "lineageTag": "9964815c-d2e4-48b6-8ca2-e37c4a84db71",
+            "sourceColumn": "Product",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Timely flag",
+            "dataType": "string",
+            "lineageTag": "26138cf0-5334-40f6-aa67-325b5cd802d3",
+            "sourceColumn": "Timely flag",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Routing Days",
+            "dataType": "int64",
+            "lineageTag": "c4195e2a-31c3-4874-b791-10b9c16a8e7a",
+            "sourceColumn": "Routing Days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Valid Duration",
+            "dataType": "int64",
+            "lineageTag": "95a3c6c2-fcf5-44b2-ae47-653cc21dc86c",
+            "sourceColumn": "Valid Duration",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Over 7 Days",
+            "dataType": "int64",
+            "lineageTag": "9eefc5b5-7a3c-4b32-99c7-b72df0c6b8ce",
+            "sourceColumn": "Over 7 Days",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Needs Review",
+            "dataType": "int64",
+            "lineageTag": "19a64f6e-1c78-456a-9d84-ca018ee1fc17",
+            "sourceColumn": "Needs Review",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date Issue",
+            "dataType": "int64",
+            "lineageTag": "3fa04ace-65fd-4785-a25f-8c5e63d5a472",
+            "sourceColumn": "Date Issue",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a90e8324-f693-4b54-b597-020994d51d37",
+        "measures": [
+          {
+            "name": "Cases",
+            "expression": "COUNTROWS('Cases')",
+            "formatString": "#,0",
+            "lineageTag": "393281ea-c36e-4c73-908b-9585eaed580f"
+          },
+          {
+            "name": "Valid Intervals",
+            "expression": "SUM('Cases'[Valid Duration])",
+            "formatString": "#,0",
+            "lineageTag": "b691ae7d-e703-446c-ac0d-70946028ce79"
+          },
+          {
+            "name": "Review Cases",
+            "expression": "SUM('Cases'[Needs Review])",
+            "formatString": "#,0",
+            "lineageTag": "000cf8a0-4393-4fce-987e-d1e5c764716e"
+          },
+          {
+            "name": "Date Issues",
+            "expression": "SUM('Cases'[Date Issue])",
+            "formatString": "#,0",
+            "lineageTag": "9da8c907-4d63-4a14-9496-3be02e57bc17"
+          },
+          {
+            "name": "Over Seven Days",
+            "expression": "SUM('Cases'[Over 7 Days])",
+            "formatString": "#,0",
+            "lineageTag": "56c97b76-4195-4414-a475-f0863e5a7458"
+          },
+          {
+            "name": "Review Share",
+            "expression": "DIVIDE([Review Cases],[Cases])",
+            "formatString": "0.0%",
+            "lineageTag": "51130282-9f4b-4a50-9613-8e64f85bce0f"
+          },
+          {
+            "name": "Known Timely",
+            "expression": "CALCULATE([Cases],'Cases'[Timely flag] IN {\"Yes\",\"No\"})",
+            "formatString": "#,0",
+            "lineageTag": "f15392dd-8451-408f-904f-3c4b12ac7599"
+          },
+          {
+            "name": "Timely Rate",
+            "expression": "DIVIDE(CALCULATE([Cases],'Cases'[Timely flag]=\"Yes\"),[Known Timely])",
+            "formatString": "0.0%",
+            "lineageTag": "260346b6-148d-4db3-be7d-61c9612ac7a3"
+          },
+          {
+            "name": "P90 Routing Days",
+            "expression": "VAR N = [Valid Intervals] VAR K = ROUNDUP(N * 0.9,0) RETURN IF(N > 0, MAXX(TOPN(K,FILTER('Cases','Cases'[Valid Duration]=1),'Cases'[Routing Days],ASC),'Cases'[Routing Days]))",
+            "formatString": "0",
+            "lineageTag": "ac34be40-585c-4a84-82fe-75976a79ed57"
+          },
+          {
+            "name": "Median Routing Days",
+            "expression": "MEDIANX(FILTER('Cases','Cases'[Valid Duration]=1),'Cases'[Routing Days])",
+            "formatString": "0.0",
+            "lineageTag": "e470bc3f-e5b8-4db0-b84c-451fd32ddaff"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Cases",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/Cases.csv\"), [Delimiter=\",\",Encoding=65001,QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source,[PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Complaint ID\", type text}, {\"Received\", type date}, {\"Year\", type text}, {\"Month\", type text}, {\"Channel\", type text}, {\"Product\", type text}, {\"Timely flag\", type text}, {\"Routing Days\", Int64.Type}, {\"Valid Duration\", Int64.Type}, {\"Over 7 Days\", Int64.Type}, {\"Needs Review\", Int64.Type}, {\"Date Issue\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

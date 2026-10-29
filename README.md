@@ -2,17 +2,19 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-31566D?style=flat-square) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square)
 
-**Python · SQLite · Excel · recurring operations reporting**
+**Power BI · Python · SQLite · Excel · recurring operations reporting**
 
-An operations reporting project using **903,983 real complaint records** from a historical Kaggle mirror of the CFPB database. It converts a large CSV into validated SQL reports and an Excel review queue, and preserves reviewer notes between runs.
+An operations reporting project using **903,983 real complaint records** from a historical Kaggle mirror of the CFPB database. It converts a large CSV into validated SQL reports, a focused Power BI routing review and an Excel review queue, and preserves reviewer notes between runs.
 
-![Portfolio overview](deliverables/portfolio-cover.png)
+**Current report:** [Complaint Intake / Power BI](deliverables/Complaint%20Intake%20Review.pbix) · [Open / refresh guide](powerbi-rebuild/README.md)
+
+![Power BI routing decision report](deliverables/intake-review-preview.png)
 
 ## Inspect the work
 
 - [Two-page management briefing](deliverables/case-study.pdf)
 - [Excel workbook](deliverables/complaint-operations-review.xlsx) — overview, monthly report and 100 editable review examples
-- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [25 automated tests](tests)
+- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [27 automated tests](tests)
 - [Method](docs/METHOD.md), [data dictionary](docs/DATA_DICTIONARY.md), [Excel / notes guide](docs/EXCEL_GUIDE.md), [verification](docs/QA_REPORT.md)
 - [Five-minute walkthrough](docs/PROJECT_WALKTHROUGH.md), [source and license](docs/SOURCES.md)
 
@@ -88,3 +90,9 @@ python tools/package_project.py
 [Kaggle dataset](https://www.kaggle.com/datasets/sebastienverpile/consumercomplaintsdata), labeled CC0 Public Domain, originally the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). The snapshot covers Dec 1, 2011–Nov 15, 2017. Code: MIT. Derived exports omit narratives, company names, ZIP, state and tags. Public complaints are not a statistical sample of all consumer experiences.
 
 Workbook authoring also uses Python 3.10+ for display-only theme metadata normalization. Set `PYTHON` to its executable if `python` is unavailable. This helper preserves native workbook parts and does not recalculate formulas.
+
+## Focused Power BI decision report
+
+[Open Complaint Intake Review](deliverables/Complaint%20Intake%20Review.pbix) · [Editable project and refresh guide](powerbi-rebuild/README.md)
+
+**Where should intake routing be reviewed?** Two native report pages pair actionable comparisons with definitions and population checks. Filters update the metrics and charts; fixed historical findings are labeled. Local report with imported data; original deliverables remain available.

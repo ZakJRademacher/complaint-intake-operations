@@ -1,0 +1,19 @@
+{
+  "source_sha256": "bb6da1d110c7cd86bf0a222ecb89f9c3bbe5f540891d15b6a8eaa86bf3d8c448",
+  "data_sha256": "68477315f757b25a26120040d045485cd00d21319362c61d7367b64852d55253",
+  "cases": 903983,
+  "review_cases": 105969,
+  "date_issues": 7052,
+  "native_refresh": "passed in Power BI Desktop 2026-10-29",
+  "original_workbook_preserved": true,
+  "native_pages_reviewed": 2,
+  "filters_restored": "All",
+  "native_filter_check": {
+    "channel": "Email",
+    "cases": 354,
+    "p90_days": 19,
+    "review_cases": 87,
+    "date_issues": 3
+  },
+  "source_snapshot": "20261021T091648Z_6ce79a896188"
+}
