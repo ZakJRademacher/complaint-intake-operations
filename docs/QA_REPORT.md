@@ -1,5 +1,9 @@
 # Quality report
 
+## Current source check — November 1, 2026
+
+The current 27-test suite passed during the documentation audit. The earlier 25-test records below describe their dated validation stages. This check did not repeat native Power BI or Excel refresh, or change the reports.
+
 Validated against the complete 903,983-row Kaggle snapshot on October 15, 2026.
 
 - **25 automated tests pass.** Synthetic test fixtures exercise date parsing, strict >7-day boundary, negative intervals, unknown response denominator, identical/conflicting IDs, invalid IDs, bad dates, nearest-rank P90, rerun note preservation, unmatched annotations, Excel-preface import, invalid resolved notes and duplicate note IDs.

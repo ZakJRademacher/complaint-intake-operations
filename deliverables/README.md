@@ -1,9 +1,10 @@
-# Client-facing deliverables
+# Reports and supporting files
 
-- `complaint-operations-review.xlsx`: editable three-sheet review workbook; macros are not used.
-- `case-study.pdf`: two-page management briefing.
-- `portfolio-cover.png`: project overview.
-- `routing-by-channel.png`: sourced descriptive chart.
-- `excel-*-preview.png`: visual reviews of each workbook sheet.
+- [Power BI intake review](Complaint%20Intake%20Review.pbix): the current two-page routing report, with imported data. [Guide](../powerbi-rebuild/README.md).
+- [Excel review](complaint-operations-review.xlsx): a three-sheet workbook with formulas and selected cases for annotation.
+- [Management briefing](case-study.pdf): a two-page written summary.
+- `routing-by-channel.png`: the historical channel comparison.
+- `excel-*-preview.png`: workbook sheet previews.
+- `portfolio-cover.png`: a presentation image.
 
-Read the project README and docs before adapting to a new source. The 100 review examples are selected historical cases, not a live work queue. No completed review is fabricated.
+The Excel queue contains 100 selected historical cases, rather than the full review population or a live backlog. Review notes start blank. See the [project overview](../README.md) for the source, definitions, and refresh steps.

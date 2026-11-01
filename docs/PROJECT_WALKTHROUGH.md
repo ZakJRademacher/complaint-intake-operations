@@ -1,14 +1,12 @@
-# Five-minute project walkthrough
+# Complaint intake walkthrough
 
-1. **Problem:** A recurring CSV arrives, operations needs counts, date anomalies and a traceable review list, and someone needs to annotate cases without losing their work next refresh.
-2. **Source:** Show the real Kaggle/CFPB snapshot and provenance fingerprint. Explain why narratives and identifying company/location fields are omitted.
-3. **Code:** Show `src/pipeline.py` staging and ID rules. Open `sql/channels.sql` for CTEs, window functions and a valid P90 denominator. Distinguish the source response flag from routing days.
-4. **Deliverable:** Open Excel overview, then Monthly and Review queue. Explain why the partial month is labeled and why a 100-case selection cannot represent all flagged complaints.
-5. **Handoff:** Enter an owner, status and note on a copy of the workbook. Export that sheet, import its CSV, rerun, and inspect merged notes. Never publish real annotations to the public repository.
-6. **Evidence:** Run 25 tests, inspect seven full-data reconciliation controls and the independent output verification. Explain the native-Excel limitation plainly.
+Start with the [Power BI report](../deliverables/Complaint%20Intake%20Review.pbix). It compares routing delays with review workload, so a channel with a long interval can be read alongside the number of cases behind it.
 
-## Relevant paid work
-CSV cleanup and validation; SQL report preparation; recurring spreadsheet refreshes; exception-list handoffs; documentation of repeatable admin workflows. Ask a prospective client about column definitions, review thresholds, refresh frequency and note ownership before adapting the project.
+1. Explain the source: 903,983 historical Kaggle/CFPB records, with narratives and company/location fields omitted from the reporting data.
+2. Read the definition of routing: sent date minus received date. Contrast it with the source timely-response flag; neither should be called complaint resolution time.
+3. Open `src/pipeline.py` to trace ID handling, then `sql/channels.sql` for channel counts and nearest-rank P90 over valid nonnegative intervals.
+4. Open the Excel workbook. The Review queue contains 100 selected examples; the full generated queue has 105,969 cases. The final source month is partial.
+5. In a copy, enter an owner, status, and note. Export that sheet to UTF-8 CSV, import it, rerun the pipeline, and inspect the merged notes. Keep actual annotations private.
+6. Run the 27 tests and inspect the reconciliation controls. The recorded workbook checks use the authoring engine; native Excel recalculation is a separate, untested boundary.
 
-## Honest limits
-This is a personal portfolio project. It does not establish a prior client relationship, production deployment, earned savings, certification or a completed degree. The dataset is historical and the example queue is intentionally small. Automated controls support a review; they do not adjudicate complaints.
+For another intake workflow, agree on date definitions, review thresholds, record keys, update frequency, and note ownership first. The seven-day example here is a review rule, rather than a statutory deadline.

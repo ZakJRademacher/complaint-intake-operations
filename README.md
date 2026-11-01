@@ -1,51 +1,45 @@
-# Complaint Intake & Response Operations
+# Complaint Intake Review
 
-![Current project presentation](deliverables/portfolio-cover-wide.png)
+I used **903,983 historical complaint records** to look at intake routing: how long records took to move from receipt to sending, where unusual intervals appeared, and how a reviewer could keep notes between refreshes.
 
-[Motion cover preview](deliverables/portfolio-motion.webm) · [Presentation maintenance guide](docs/VISUAL_DESIGN.md)
+Python and SQLite prepare the data. A **two-page Power BI report** compares routing intervals with review workload, and an Excel workbook shows selected cases for review.
 
-The October 2026 presentation refresh retains the existing calculations, source policies and report contracts. Cover animation is separate from native desktop report behavior.
+[Download the Power BI report](deliverables/Complaint%20Intake%20Review.pbix) · [Open and refresh](powerbi-rebuild/README.md) · [Read the method](docs/METHOD.md)
 
+![Power BI report comparing complaint routing intervals and review workload](deliverables/intake-review-preview.png)
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square) ![SQLite](https://img.shields.io/badge/SQLite-31566D?style=flat-square) ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square)
-
-**Power BI · Python · SQLite · Excel · recurring operations reporting**
-
-An operations reporting project using **903,983 real complaint records** from a historical Kaggle mirror of the CFPB database. It converts a large CSV into validated SQL reports, a focused Power BI routing review and an Excel review queue, and preserves reviewer notes between runs.
-
-**Current report:** [Complaint Intake / Power BI](deliverables/Complaint%20Intake%20Review.pbix) · [Open / refresh guide](powerbi-rebuild/README.md)
-
-![Power BI routing decision report](deliverables/intake-review-preview.png)
-
-## Inspect the work
-
-- [Two-page management briefing](deliverables/case-study.pdf)
-- [Excel workbook](deliverables/complaint-operations-review.xlsx) — overview, monthly report and 100 editable review examples
-- [Python pipeline](src/pipeline.py), [six SQL reports](sql), [27 automated tests](tests)
-- [Method](docs/METHOD.md), [data dictionary](docs/DATA_DICTIONARY.md), [Excel / notes guide](docs/EXCEL_GUIDE.md), [verification](docs/QA_REPORT.md)
-- [Five-minute walkthrough](docs/PROJECT_WALKTHROUGH.md), [source and license](docs/SOURCES.md)
-
-## Why this work is useful
-
-The deliverables demonstrate CSV cleanup, recurring report preparation, SQL aggregation, spreadsheet formulas, exception handling and documented handoff. The project includes stable-ID review-note persistence, a practical requirement when another person reviews an export and the source is refreshed later. This is a personal portfolio demonstration; no client or employer engagement is claimed.
-
-## Results from the complete snapshot
+## What the snapshot shows
 
 | Measure | Result |
 |---|---:|
 | Complaint records | 903,983 |
 | Source timely flag: Yes | 879,376 (97.28% of known flags) |
 | Nonnegative routing intervals | 896,931 |
-| Median / P90 interval | 0 / 7 calendar days |
+| Median / P90 routing interval | 0 / 7 calendar days |
 | Negative intervals, flagged separately | 7,052 |
-| Routing interval above 7 days | 78,562 |
-| Review queue across all flag reasons | 105,969 |
+| Routing intervals above seven days | 78,562 |
+| Cases in the review queue, across all reasons | 105,969 |
 
-**Interpretation:** routing is the recorded sent date minus received date, not company resolution time. The seven-day cutoff is a demonstration review rule, not a legal SLA. The source's timely-response flag measures something different. November 2017 ends on Nov 15. Do not interpret these historical records as a current backlog or compare lender quality from complaint volumes.
+Routing means **sent date minus received date**. It doesn't measure how long a company took to resolve a complaint. The source's timely-response flag is a separate measure, and the seven-day cutoff is an illustrative review rule.
+
+Review reasons can overlap, but each case enters the queue once. Negative intervals stay visible as date issues. The historical snapshot isn't a current backlog, and complaint counts aren't a fair ranking of lender quality.
+
+## Review and keep notes
+
+The [Excel workbook](deliverables/complaint-operations-review.xlsx) contains an overview, monthly report, and **100 selected review examples**. These examples are neither the full queue nor a representative sample.
+
+Notes are stored separately from generated results and rejoined by Complaint ID. To carry edits forward, export the **Review queue** sheet as UTF-8 CSV, then run:
+
+```sh
+python src/update_notes.py exported-review-queue.csv
+python src/pipeline.py
+```
+
+[Excel and notes guide](docs/EXCEL_GUIDE.md) · [PDF briefing](deliverables/case-study.pdf)
 
 ## Reproduce the core project
 
-Python 3.10+; the pipeline and tests use only the standard library. Download size is about 112 MB, extracted CSV about 413 MB. Allow approximately 1 GB free space and several minutes for the full run.
+From the repository root, using Python 3.10+ and the standard library:
 
 ```sh
 python src/download_data.py
@@ -53,53 +47,15 @@ python src/pipeline.py
 python -m unittest discover -s tests -v
 ```
 
-The downloader uses the public Kaggle dataset endpoint. If its access policy changes, download `Consumer_Complaints.csv` manually from the linked Kaggle page into `data/raw/`. The delivered source fingerprint is recorded in `results/analysis.json`; upstream snapshots may change.
+Allow about 1 GB of free space and several minutes for the full run. The download is about 112 MB; the extracted CSV is about 413 MB. If the public download endpoint changes, place `Consumer_Complaints.csv` in `data/raw/` using the source link below.
 
-Generated locally inside the published snapshot: `complaints.sqlite`, the complete `review_queue.csv`, `quality_issues.csv`, and all aggregate reports. Raw data, database and full row-level exports are excluded from the compact repository. The delivered workbook shows only 100 selected review examples. They are not a representative sample.
+The full database and row-level exports are generated locally and excluded from the compact repository. New runs publish through `results/latest.json`; `python src/publication.py` locates the current files. Checked-in root results remain historical references. [Versioning and recovery](docs/RESULT_VERSIONS.md).
 
-## Current results and recovery
+## Documentation
 
-New runs publish a complete version through `results/latest.json`. Run `python src/publication.py` to locate the current database, CSVs and analysis record. Checked-in root-level results remain historical reference files. [Versioned results and recovery](docs/RESULT_VERSIONS.md) explains failure handling and rebuilds.
+- [Report guide](powerbi-rebuild/README.md) · [Data dictionary](docs/DATA_DICTIONARY.md) · [Sources](docs/SOURCES.md)
+- [Verification](docs/QA_REPORT.md) · [Walkthrough](docs/PROJECT_WALKTHROUGH.md)
+- [Pipeline](src/pipeline.py) · [SQL reports](sql) · [Tests](tests)
+- [Cover](deliverables/portfolio-cover-wide.png) · [Motion preview](deliverables/portfolio-motion.webm) · [Visual maintenance](docs/VISUAL_DESIGN.md)
 
-### Carry notes into the next run
-
-Export the **Review queue** Excel sheet as UTF-8 CSV (one sheet), then:
-
-```sh
-python src/update_notes.py exported-review-queue.csv
-python src/pipeline.py
-```
-
-See the [Excel guide](docs/EXCEL_GUIDE.md) for statuses, validation, refresh and limits. No fictitious completed reviews are supplied.
-
-### Optional presentation rebuild
-
-```sh
-pip install -r requirements-visuals.txt
-python tools/build_presentation.py
-node tools/build_workbook.mjs /absolute/path/to/complaint-operations
-```
-
-The workbook builder requires `@oai/artifact-tool`, supplied by a compatible spreadsheet authoring runtime. Set `RETAIL_ARTIFACT_ROOT` to that runtime's Node dependency root when necessary. The checked-in XLSX is ready to inspect; the Python/SQL workflow and tests do not require that optional authoring package. Artifact-tool recalculation was tested; native Excel was not available.
-
-```sh
-pip install -r requirements-qa.txt
-python tools/verify_outputs.py
-python tools/package_project.py
-```
-
-## Repository layout
-
-`src/` ingestion and note import · `sql/` readable reports · `tests/` edge cases · `data/review_notes.csv` persistent annotation input · `results/` aggregates and evidence · `deliverables/` client-facing files · `docs/` handoff · `tools/` presentation, verification and packaging.
-
-## Data and license
-
-[Kaggle dataset](https://www.kaggle.com/datasets/sebastienverpile/consumercomplaintsdata), labeled CC0 Public Domain, originally the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/). The snapshot covers Dec 1, 2011–Nov 15, 2017. Code: MIT. Derived exports omit narratives, company names, ZIP, state and tags. Public complaints are not a statistical sample of all consumer experiences.
-
-Workbook authoring also uses Python 3.10+ for display-only theme metadata normalization. Set `PYTHON` to its executable if `python` is unavailable. This helper preserves native workbook parts and does not recalculate formulas.
-
-## Focused Power BI decision report
-
-[Open Complaint Intake Review](deliverables/Complaint%20Intake%20Review.pbix) · [Editable project and refresh guide](powerbi-rebuild/README.md)
-
-**Where should intake routing be reviewed?** Two native report pages pair actionable comparisons with definitions and population checks. Filters update the metrics and charts; fixed historical findings are labeled. Local report with imported data; original deliverables remain available.
+This independent project uses a [Kaggle mirror](https://www.kaggle.com/datasets/sebastienverpile/consumercomplaintsdata) of the [CFPB Consumer Complaint Database](https://www.consumerfinance.gov/data-research/consumer-complaints/), covering December 1, 2011–November 15, 2017. Public complaints aren't a statistical sample of all consumer experiences. Derived exports omit narratives, company names, ZIP, state, and tags. Source mirror: CC0 Public Domain; original code: MIT.

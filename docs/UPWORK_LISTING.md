@@ -1,13 +1,13 @@
-# Portfolio listing
+# Portfolio reference copy
 
-Title: Complaint Intake Review | Python, SQL & Excel
+This project remains public on GitHub and is not one of the six currently featured Upwork entries. The copy below is a reference for describing the work.
 
-Role: Portfolio project owner | Data cleaning, SQL reporting and Excel workflow
+Title: Complaint Intake Review | Power BI
 
-Description: Personal portfolio project using 903,983 real Kaggle/CFPB complaint records. Python validates IDs and dates, and SQLite creates channel, monthly and review-queue reports. The Excel workbook includes formulas, a chart and 100 review examples. A CSV import preserves reviewer notes across runs. Includes a two-page briefing, full documentation and 25 automated tests. Historical public data; seven-day routing review is a demo rule, not a regulatory SLA.
+Role: Routing analysis, SQL preparation and review-note workflow
 
-Skills: Python; SQL; Microsoft Excel; Data Cleaning; Data Analysis.
+Description: I reviewed 903,983 historical CFPB complaint records to compare receipt-to-sending intervals with review workload. Python and SQL prepare the data for a two-page Power BI report and an Excel review. Notes are saved by Complaint ID and carried into later runs. Includes definitions, source instructions, and tests. The seven-day review cutoff is illustrative; routing is not complaint resolution time.
 
-Cover caption: Complaint intake reporting: 903,983 Kaggle/CFPB records, SQL controls and an Excel review workflow.
+Skills: Microsoft Power BI; Python; SQL; Microsoft Excel; Data Analysis.
 
-PDF caption: Two-page briefing: findings, review-note handoff, tests, source definitions and reporting limitations.
+Repository: https://github.com/ZakJRademacher/complaint-intake-operations
