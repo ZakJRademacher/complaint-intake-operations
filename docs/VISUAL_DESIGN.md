@@ -4,7 +4,7 @@ Keep the report's labels, units, source attribution, and metric definitions visi
 
 ## Update the report
 
-After rebuilding native source, run `python tools/apply_visual_theme.py` from the project root. Open the report in Power BI Desktop, inspect every page, and check the interactions described in its guide. Restore defaults, save, rebuild the portable package where applicable, and reopen the saved download. Tableau's fixed written findings must remain consistent with the stated population.
+After rebuilding native source, run `python tools/apply_visual_theme.py` from the project root. Open the report in Power BI Desktop, inspect every page, and check the interactions described in its guide. Restore defaults, save, rebuild the portable package where applicable, and reopen the saved download. Keep fixed period labels and unfiltered definitions consistent with the stated population; check filter-responsive measures separately.
 
 Control example: **903,983 cases, 105,969 review cases, 7,052 date issues, and seven-day P90 among valid routing intervals.** Check the source totals and field mappings as well as the rounded labels. Formatting must not change calculations, missing-value rules, keys, or the population behind a measure.
 

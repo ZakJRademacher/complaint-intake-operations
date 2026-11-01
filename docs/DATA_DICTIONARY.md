@@ -2,9 +2,9 @@
 
 | Derived field | Type | Meaning |
 |---|---|---|
-| source_row | integer | Original CSV row number, first data record = 2 |
+| source_row | integer | Logical CSV record number, header = 1 and first data record = 2 |
 | complaint_id | text | Stable source Complaint ID; never a row counter |
-| fingerprint | text | SHA-256 of eight selected source strings |
+| fingerprint | text | SHA-256 of eight selected source strings after outer-whitespace trimming |
 | received / sent | ISO date or null | Parsed Date received / Date sent to company |
 | month | text | Received YYYY-MM, or Unknown for an invalid received date |
 | product / issue | text | Source product / issue; blank becomes Unspecified |

@@ -1,7 +1,7 @@
 # Method and operating assumptions
 
 ## Ingestion and lineage
-Preparation starts by reading the CSV as UTF-8 with an optional BOM. Only eight documented fields enter the SQLite staging table: Complaint ID, received date, sent date, product, issue, submitted-via channel, categorical company response and timely-response flag. `source_row` is the CSV line number starting at 2. A SHA-256 of the selected raw strings supports deduplication; the entire source file has a separate SHA-256. Narrative and identifying location/company fields never enter derived tables.
+Preparation starts by reading the CSV as UTF-8 with an optional BOM. Only eight documented fields enter the SQLite staging table: Complaint ID, received date, sent date, product, issue, submitted-via channel, categorical company response and timely-response flag. `source_row` counts logical CSV records, with the header as record 1; quoted multiline fields do not advance it more than once. A SHA-256 of the eight selected strings after trimming their outer whitespace supports deduplication; the entire source file has a separate SHA-256. Narrative and identifying location/company fields never enter derived tables.
 
 ## IDs and records
 IDs remain text. Empty/nondecimal IDs are quarantined. For repeated IDs with identical selected values, keep the earliest source row; for conflicting selected values, quarantine every occurrence of that ID. Differences solely in omitted source fields do not count as selected-field conflicts. The delivered snapshot has no duplicate or invalid IDs. The `selected` table preserves retained staging lineage. Source rows reconcile to accepted cases plus invalid-ID, conflicting-ID and redundant identical rows.
