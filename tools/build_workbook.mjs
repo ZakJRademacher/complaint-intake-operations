@@ -16,7 +16,7 @@ const input=JSON.parse(await fs.readFile(path.join(results,'analysis.json'),'utf
 const m=input.metrics,r=input.reports;
 const wb=Workbook.create();
 const main=wb.worksheets.add('Operations review'),monthly=wb.worksheets.add('Monthly'),queue=wb.worksheets.add('Review queue');
-const navy='#18283F',blue='#3067B0',muted='#65758A',green='#087F73';
+const navy='#172B4B',blue='#285CD2',muted='#5C6C87',green='#285CD2';
 for(const s of [main,monthly,queue]){
  s.showGridLines=false;
  s.getRange('A1:K110').format.font={name:'Arial',size:10,color:navy};
@@ -75,6 +75,7 @@ for(let i=0;i<12;i++){
  monthly.getRange(`K${row}:L${row}`).formulas=[[`=A${source}`,`=B${source}`]];
 }
 const chart=main.charts.add('column',monthly.getRange('K5:L17'));
+chart.series.items[0].fill=blue;
 chart.title='Last 12 observed months · final month partial';chart.hasLegend=false;chart.titleTextStyle.fontSize=11;chart.xAxis={axisType:'textAxis',textStyle:{fontSize:8}};chart.yAxis={numberFormatCode:'#,##0',textStyle:{fontSize:9}};chart.setPosition('D5','L15');
 main.tables.add(`A19:K${ce}`,true,'ChannelReview');monthly.tables.add(`A5:I${me}`,true,'MonthlyReview');queue.tables.add(`A5:J${qe}`,true,'CaseReview');
 head(main,'A5:B5');head(main,'A19:K19');head(monthly,'A5:I5');head(queue,'A5:J5');

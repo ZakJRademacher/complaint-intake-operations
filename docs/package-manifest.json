@@ -31,8 +31,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5501,
-      "sha256": "31556710eefe27823c1d88a93d984d7db63225115588697b609d9ee1bebb7814"
+      "bytes": 6880,
+      "sha256": "0d6f4cf7518024c9540bf55f4643f24088f1de67e53790086beb7c303df5b412"
     },
     {
       "path": "data/review_notes.csv",
@@ -50,44 +50,69 @@
       "sha256": "2084fc0a6f3abc2bfe7c4edae0312f2390484c4108460bccab852a1567879c2e"
     },
     {
+      "path": "deliverables/Complaint Intake Review.pbix",
+      "bytes": 13378515,
+      "sha256": "324a5b06055a1358b088f569a3a54eb53b2a2335ec673e7d9cba16f0ad33d779"
+    },
+    {
       "path": "deliverables/README.md",
-      "bytes": 519,
-      "sha256": "b902f91c9b22120da7bd0f3675a98b291f07e79a9b2e3b1748ccd629722a4fb1"
+      "bytes": 528,
+      "sha256": "7229654eadbabd873c21cd8cd3a050b8c37565a9dd0f24d8d86245c03abab6d7"
     },
     {
       "path": "deliverables/case-study.pdf",
-      "bytes": 33664,
-      "sha256": "0ae4e1a9327e3e3fb80a18a163a1704d8d7b35b4477e0a61c2d38904157e1bb1"
+      "bytes": 33649,
+      "sha256": "aabf98f83b9e0689b08c54c198659f37ff3b0b91f98c4e16c42dad791fe33a26"
     },
     {
       "path": "deliverables/complaint-operations-review.xlsx",
-      "bytes": 30499,
-      "sha256": "0ca32b92bb45e94ea5134a6bab2d8c84804f3d14bc465d3e050e887f973bdcf5"
+      "bytes": 37133,
+      "sha256": "14dcdcbb3dd0771b5d455dd7f45120dea7a70cbf5840e0af37c596cc9267161d"
     },
     {
       "path": "deliverables/excel-monthly-preview.png",
-      "bytes": 137086,
-      "sha256": "ff61ab0ec532878a75369845655d83689e40d9aa8d4f52992d1ed3698ccc59b5"
+      "bytes": 136467,
+      "sha256": "39e806233fe0cfccbb7b770b4d73dbc367e2e124657bca50c02e952857322036"
     },
     {
       "path": "deliverables/excel-operations-preview.png",
-      "bytes": 227427,
-      "sha256": "4d5982caf34d3d7f6984d4cc14518b388b644d45273c641e57e1e046ec5bbe2f"
+      "bytes": 227793,
+      "sha256": "d41705dae77f9b20b0bf2614b918da78003eed5316680dbc1c4b9c8abe13d0eb"
     },
     {
       "path": "deliverables/excel-queue-preview.png",
-      "bytes": 126056,
-      "sha256": "cfed52904aa45bd167619862f5ae8d93ee0506dee8562909e80604a942d7b3c1"
+      "bytes": 126198,
+      "sha256": "d8da43c0e93b0b657d1631a06ba9b1ce431b9db0653ff261391b3d30e7d7e4aa"
+    },
+    {
+      "path": "deliverables/intake-review-preview.png",
+      "bytes": 439656,
+      "sha256": "77f4fcfb68afbd308f9297062a6d13d530d20719c35f402119b34dc2f06cf556"
+    },
+    {
+      "path": "deliverables/portfolio-cover-wide.png",
+      "bytes": 325813,
+      "sha256": "1b3729cc86cdce772ced70de73b4047fed5463821c5743e7ef2d9946d51227a1"
     },
     {
       "path": "deliverables/portfolio-cover.png",
-      "bytes": 109467,
-      "sha256": "8df8718a299b8680189c6797cd9e3d1e9325086151675db80b2067fed1bb9f89"
+      "bytes": 399239,
+      "sha256": "f13734d26d2c773660530244d057fc607456e4918753ae551467bf20f1cba618"
+    },
+    {
+      "path": "deliverables/portfolio-motion.webm",
+      "bytes": 349884,
+      "sha256": "7cc20e649b1575874875cef4831026ae5a4b3e671a3a24e0b48a7093b027c33e"
     },
     {
       "path": "deliverables/routing-by-channel.png",
-      "bytes": 29712,
-      "sha256": "61804cd7983ceb084f26472ac380385e4c20e9939c72939038d15b5b4a87411c"
+      "bytes": 29636,
+      "sha256": "d42aecd766f3f09544097321dad54d3af40d4bd1e5152a7a592beb58399c7d7b"
+    },
+    {
+      "path": "design-tokens.json",
+      "bytes": 1121,
+      "sha256": "89ebf04b31f164b50a68a67ea8c9f25c75451961c35b858f4bfb76b3fdee5ff5"
     },
     {
       "path": "docs/DATA_DICTIONARY.md",
@@ -101,8 +126,8 @@
     },
     {
       "path": "docs/METHOD.md",
-      "bytes": 3566,
-      "sha256": "b77b43d494cabc166dd71bb7dac1f3b64c5fffa85af7779fa790363c99e604bb"
+      "bytes": 3953,
+      "sha256": "20e66111ec1fe62e760a23e60906833e08890899a5435d5ab61166a12efd4cbd"
     },
     {
       "path": "docs/PROJECT_WALKTHROUGH.md",
@@ -135,6 +160,11 @@
       "sha256": "a3f01399bdd93596b4e5160809dcceaf4b4e03cb63c202e7fb369def42b23c85"
     },
     {
+      "path": "docs/VISUAL_DESIGN.md",
+      "bytes": 2374,
+      "sha256": "001f6ccfd268c23edc5c39d0b72baba410860c0b868d9dc705cf2c0fcf4d1950"
+    },
+    {
       "path": "docs/independent-verification.json",
       "bytes": 949,
       "sha256": "e954a6435af4e682f3744cda61570daea73bea6e523558b248d9637836402bbf"
@@ -143,6 +173,206 @@
       "path": "docs/workbook-verification.json",
       "bytes": 269,
       "sha256": "6c7f5b71a404a101db98a1dfdce590e9d652e5bfbaecf9461ea4bc85e15a7f23"
+    },
+    {
+      "path": "powerbi-rebuild/.gitignore",
+      "bytes": 17,
+      "sha256": "3ab65c1bd4302b127a9d4e971072ab0e5a6c13431b9fd0a07ab7a5f4e88e51ab"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/.platform",
+      "bytes": 306,
+      "sha256": "8e16ce055f8412d56160e1b29facf4da1548761423d18c7c06db4366f2b7d265"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/StaticResources/RegisteredResources/Fieldnotes.json",
+      "bytes": 533,
+      "sha256": "122164aba69938d2a4d1cc9b95bcd6b073bf0252cf1eafa9af8df81137c6cc3c"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition.pbir",
+      "bytes": 126,
+      "sha256": "9626ca5efdac114b8832a6b3e9cc8eb969eea5ac69e2a5fd7a71919807e1a699"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/page.json",
+      "bytes": 770,
+      "sha256": "058f4ce204a6a7c00a924a8e9088d36afcc3a69d4efd6ca2c7de3258a4c2e081"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/context/visual.json",
+      "bytes": 3160,
+      "sha256": "4c529d20c1258bff6c0982422ebe07c62d8b66b3ce3718d00eae99953c80c988"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/duration/visual.json",
+      "bytes": 8503,
+      "sha256": "e216bd0edb272910193d2713108759b2b37e8103499d68842c80e9fb1078bad9"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/eyebrow/visual.json",
+      "bytes": 2971,
+      "sha256": "49ead46b5b95fb914bfd878f5b0fafb6903ae1fc74590fa9b532ea63170ba08f"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/filter0/visual.json",
+      "bytes": 4836,
+      "sha256": "26396cc746a2f7581a4602ae69a5bb0ebadbfc45bbc484b7c0493f855b8f96cf"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/filter1/visual.json",
+      "bytes": 5299,
+      "sha256": "2e08ea5985f4489f2937048b7e3dfd85430859d0b79608236720bd70acec59f5"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/filter2/visual.json",
+      "bytes": 4840,
+      "sha256": "7b1252c1c80dc802af8df3d67bc9e3304d754ed85e4760bc7a627f795dd8d84b"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/footer/visual.json",
+      "bytes": 3086,
+      "sha256": "21654081c49def5f2f96835c623386b7e40922778d6b2aa0da7acf93cab80ee4"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/interpretation/visual.json",
+      "bytes": 3183,
+      "sha256": "f5d49a1451fc0326e399e06d5f0065483e56097f001fa2fe0416efc2c19b67c1"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/kpi0/visual.json",
+      "bytes": 3975,
+      "sha256": "618b0ef7f67f1dc38c487634c33cebbe36e4e46bd6dc7b31b0ba4564893cfad7"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/kpi1/visual.json",
+      "bytes": 4023,
+      "sha256": "1d6afccb929df032dc74c7055fa1d166813f088c4d5908c4d21ebc1d6af76755"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/kpi2/visual.json",
+      "bytes": 4000,
+      "sha256": "350de5e1901ba2d218d0256695b47286578fe8eacf3e9fcba743d1f0e71bacf9"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/kpi3/visual.json",
+      "bytes": 4007,
+      "sha256": "40ff6c79b94b178d104307f876620c8dd3b6febbf9feb208c78546060eb632d9"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/sub/visual.json",
+      "bytes": 3053,
+      "sha256": "a71d89c4838f189de23387b898f7a3475b74e35a4521f8c515361c95372d483c"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/title/visual.json",
+      "bytes": 2979,
+      "sha256": "d19a723bc44b4ac4bb3569e8b4135f9a0b999ed784697ce30e3f66698e39da47"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/decision/visuals/workload/visual.json",
+      "bytes": 8483,
+      "sha256": "d00605723fa9da30d31fc6ac78906dd20742c7a99c50fc5b023ebb33621efa8a"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/page.json",
+      "bytes": 771,
+      "sha256": "27ac2deba3d8c1ef7f298cc0db0689f2af88a20edd32ed6a3c6977e878ca8920"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/visuals/channel/visual.json",
+      "bytes": 8026,
+      "sha256": "192cce7626bf2fb1fb1d55358f022675ddddbad922e69c6c1467d1b764e84cd5"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/visuals/intro/visual.json",
+      "bytes": 3064,
+      "sha256": "984d0df8f2631c763b79017ca601cf93c8a0f38008390c4fdc0e326fde839e45"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/visuals/refresh/visual.json",
+      "bytes": 3163,
+      "sha256": "d98b06954a2eb660a172802a1bc99640b1a7e7c43d3468e117ce996d242130cc"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/visuals/rules/visual.json",
+      "bytes": 4827,
+      "sha256": "5612b4621a24bd26988ccdaaed5fec170500718295a503d9ed3e9e1d68fdeb6a"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/details/visuals/title/visual.json",
+      "bytes": 2982,
+      "sha256": "7c5469c4a3fe294a7248cadd8c5cdf3dce20296881732a13f88465692cc966ac"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/pages/pages.json",
+      "bytes": 216,
+      "sha256": "fc5eef2292f8b6dd5943000f9eadca38acf5770c73770688fe509ec1891bc9a6"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/report.json",
+      "bytes": 1159,
+      "sha256": "e0e826e00c1bd58390a2f96745efa0dd4920a1594c10c039b4aa3f01abc219e7"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.Report/definition/version.json",
+      "bytes": 152,
+      "sha256": "c8bdd966a85f1eaab4312d2096b6d7b508243e4d7bc5a4d25af3cfcb1056a4e7"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.SemanticModel/.platform",
+      "bytes": 313,
+      "sha256": "b81c32ec98100abb2f6858c8f444223ff33d968e6f3a1ac6a9115b05fa2bf1f0"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.SemanticModel/definition.pbism",
+      "bytes": 43,
+      "sha256": "ed99ec078efd2ff27fc1c65cc97902138d7d3c438acdb7770ae37dc71c7f06c8"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.SemanticModel/diagramLayout.json",
+      "bytes": 699,
+      "sha256": "ab1859cea437b820d1acb977423173f6e8453d666389667755109d16198deda5"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.SemanticModel/model.bim",
+      "bytes": 7793,
+      "sha256": "d68823f484236143146a8e8ea8f52d4c528b831acc5463a7c6b1b9a4ba7a1327"
+    },
+    {
+      "path": "powerbi-rebuild/IntakeReview.pbip",
+      "bytes": 148,
+      "sha256": "48d11d4b754a27c06f3bcd9a853a4ac9a49599691b3cabc54a3bf22fd5e165f5"
+    },
+    {
+      "path": "powerbi-rebuild/README.md",
+      "bytes": 2689,
+      "sha256": "041e7002430d347dc06d8ed6277ad5f534a6811580b5875c309bbf21b29a129d"
+    },
+    {
+      "path": "powerbi-rebuild/data/README.md",
+      "bytes": 1307,
+      "sha256": "8fe3175eb2d80b9eac1e4937230ceb2f6bd753b76e6ce81cf6e502786ebafc3c"
+    },
+    {
+      "path": "powerbi-rebuild/verification.json",
+      "bytes": 614,
+      "sha256": "92905e3ab19a94f243b1349915569bd4e165e154f28447c4465a2a1507c99ef3"
+    },
+    {
+      "path": "presentation/build_cover.py",
+      "bytes": 2396,
+      "sha256": "2ac60de47b08a8a60fdffd01ad5b719dc8bc8cfed2d7a33f25d307128b5f6531"
+    },
+    {
+      "path": "presentation/cover-template.html",
+      "bytes": 4116,
+      "sha256": "a86b75770d581db473cf62dff6a2a3ed75b6278872773b47ab16a085dd517b52"
+    },
+    {
+      "path": "presentation/cover.json",
+      "bytes": 597,
+      "sha256": "58a917b8991526d0a932a596ba138629e63ded8101caa26d32e583e8e0aa2457"
     },
     {
       "path": "release.json",
@@ -221,8 +451,8 @@
     },
     {
       "path": "src/pipeline.py",
-      "bytes": 10103,
-      "sha256": "6fa6bffa7004c4702a79fc88f63b06c96b318026c91b68cc78fc69e15f0a3dc9"
+      "bytes": 10469,
+      "sha256": "e727527d1c0e2dcdb072ad2a35889a19104a73d8cf61ef85ac08beb2e6ab879c"
     },
     {
       "path": "src/publication.py",
@@ -233,6 +463,11 @@
       "path": "src/update_notes.py",
       "bytes": 2928,
       "sha256": "c6b25ba22a3bb9e3bf49b88f7dafa2b2856de4624e035093c6020e0632d55f32"
+    },
+    {
+      "path": "tests/test_csv_contract.py",
+      "bytes": 2239,
+      "sha256": "0aaa03a7ca5c53d5d2b9d6e6c80cb3cd2fbccf2239a0a191441ab5cc2db81134"
     },
     {
       "path": "tests/test_packaging.py",
@@ -250,14 +485,24 @@
       "sha256": "d88edf569e68c9510b7f92206bbce662b69525941c0ddb4b680a3822ca07cffd"
     },
     {
+      "path": "tools/apply_visual_theme.py",
+      "bytes": 5443,
+      "sha256": "cfc932c84d5ae8ea7d304c4db7c222f895539b267c58e83da98c7a4a7cf10b76"
+    },
+    {
       "path": "tools/build_presentation.py",
-      "bytes": 28433,
-      "sha256": "32c7ae24f917cf24f149e73f95f626a31607a092195bc86c47f03c38da90dd93"
+      "bytes": 28704,
+      "sha256": "d4d4e0e8dec47b31be9e28e49bc958081ce5a89183f58234a297b12365928112"
     },
     {
       "path": "tools/build_workbook.mjs",
-      "bytes": 9885,
-      "sha256": "4e642f842bfa73e25545abd9ac2f8da80cbabbbd7a681da340cc0acf7502c5a8"
+      "bytes": 10016,
+      "sha256": "01b6dd6394a25b02ece328444dbbbc54b0217c78bf0d8190bfe36720ca8d331f"
+    },
+    {
+      "path": "tools/export_powerbi_data.py",
+      "bytes": 1924,
+      "sha256": "f4d7775e070c1a1dc68cd90687aa9c427e5a58cc28d5e3cb2e7a6665c8d65101"
     },
     {
       "path": "tools/normalize_workbook.py",
@@ -266,8 +511,8 @@
     },
     {
       "path": "tools/package_project.py",
-      "bytes": 5979,
-      "sha256": "20a5bddc6c58e46a8f83bc7ed2b0c52171da4225cb9ae4ab1f9147bd6c35cb4f"
+      "bytes": 6178,
+      "sha256": "877c22263429b59c410e6db7b4dceb8db61eb24dbb015af32c50ae8e9fe9bac8"
     },
     {
       "path": "tools/verify_outputs.py",

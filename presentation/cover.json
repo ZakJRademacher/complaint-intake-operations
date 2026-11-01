@@ -1,0 +1,19 @@
+{
+  "title": "Complaint Intake",
+  "eyebrow": "WORKLOAD & EXCEPTIONS",
+  "description": "A clear route from incoming cases to accountable review.",
+  "format": "Power BI \u00b7 Excel \u00b7 SQL",
+  "image": "deliverables/intake-review-preview.png",
+  "tokens": "design-tokens.json",
+  "color_roles": {
+    "canvas": "canvas",
+    "surface": "surface",
+    "ink": "ink",
+    "muted": "muted",
+    "primary": "primary",
+    "accent": "accent"
+  },
+  "frame_label": "Intake review",
+  "preview_note": "Historical complaint records",
+  "footer": "PYTHON / SQL / EXCEPTION REVIEW"
+}

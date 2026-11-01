@@ -79,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#203B43'"
+                      "Value": "'#172B4B'"
                     }
                   }
                 }
@@ -115,7 +115,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#172B4B"
                     }
                   }
                 ]
@@ -127,7 +127,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#172B4B"
                     }
                   }
                 ]
@@ -139,7 +139,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#172B4B"
                     }
                   }
                 ]
@@ -151,7 +151,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#172B4B"
                     }
                   }
                 ]
@@ -163,7 +163,7 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "14pt",
-                      "color": "#203B43"
+                      "color": "#172B4B"
                     }
                   }
                 ]

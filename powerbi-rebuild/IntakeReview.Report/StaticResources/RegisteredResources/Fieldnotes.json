@@ -1,29 +1,29 @@
 {
-  "name": "Fieldnotes / Decision reports",
+  "name": "Intake",
   "dataColors": [
-    "#147D80",
-    "#BE5D50",
-    "#BA852D",
-    "#667C91",
-    "#9BAEAA"
+    "#285CD2",
+    "#AD512C",
+    "#92A4C4"
   ],
-  "background": "#FFFFFF",
-  "foreground": "#203B43",
-  "tableAccent": "#147D80",
+  "background": "#F3F6FC",
+  "foreground": "#172B4B",
+  "tableAccent": "#285CD2",
   "textClasses": {
     "title": {
-      "fontFace": "Segoe UI Semibold",
-      "fontSize": 13,
-      "color": "#203B43"
+      "fontFace": "Segoe UI",
+      "color": "#172B4B"
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#172B4B"
     },
     "label": {
       "fontFace": "Segoe UI",
-      "fontSize": 11,
-      "color": "#61777D"
+      "color": "#5C6C87"
     },
     "callout": {
       "fontFace": "Segoe UI",
-      "color": "#203B43"
+      "color": "#172B4B"
     }
   }
 }
