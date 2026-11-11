@@ -14,3 +14,6 @@ results/.staging_*
 results/.refresh.lock
 results/latest.json
 results/latest_*.tmp
+
+# Built by tools/package_project.py; published as a GitHub Release asset
+complaint-operations-portfolio.zip
